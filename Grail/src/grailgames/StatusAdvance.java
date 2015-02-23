@@ -2,7 +2,7 @@ package grailgames;
 
 public class StatusAdvance extends TrainingCard implements ActUponDueler {
 	
-	//bleh
+	//5th change
 	@Override
 	public void actUpon(Dueler dueler) {
 		dueler.advanceLevel();		
