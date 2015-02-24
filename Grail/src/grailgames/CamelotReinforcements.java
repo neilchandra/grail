@@ -8,9 +8,9 @@ public class CamelotReinforcements extends TrainingCard {
 	 * @param player - the player who's turn it is
 	 */
 	public void actUpon(Player player) {
-		//player.drawCard();
-		//player.drawCard();
-		//player.drawCard();
+		player.drawCard();
+		player.drawCard();
+		player.drawCard();
 	}
 
 }

@@ -5,11 +5,12 @@ public abstract class Card {
 	public String name;
 	
 	/**
-	 * Produces a string describing the details of a Card
-	 * @return - a string to to describe a Card
+	 * Produces the name of the card
+	 * @return - name
 	 */
-	@Override
-	public abstract String toString();
+	public String getName() {
+		return this.name;
+	}
 	
 	/**
 	 * Performs specific card's action, moves dueler into field
