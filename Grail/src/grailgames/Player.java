@@ -45,17 +45,17 @@ public class Player {
 	 * 
 	 *  @param index - index of Dueler on the bench */
 	public void switchDueler(int index) {
-/*		if(field[0] != null) {
+		if(field[0] != null) {
 			if(field[index] != null) {
-			Dueler tempD = field[index];
-			field[index] = field[0];
-			field[0] = tempD;
+				Dueler tempD = field[index];
+				field[index] = field[0];
+				field[0] = tempD;
 			} else {
 				
 			}
 		} else {
 			System.out.println("There is no dueler in the arena. You cannot switch!");
-		} */
+		} 
 	}
 
 	/** Plays camelotReinforcement training card */
