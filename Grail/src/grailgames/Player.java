@@ -47,22 +47,30 @@ public class Player {
 	public void switchDueler(int index) {
 		if(field[0] != null) {
 			if(field[index] != null) {
+				
+				// stores the dueler at index in the field
 				Dueler tempD = field[index];
+				
+				// switches the duelers
 				field[index] = field[0];
 				field[0] = tempD;
 			} else {
 				
+				// only moves dueler from arena to bench
+				field[index] = field[0];
 			}
 		} else {
 			System.out.println("There is no dueler in the arena. You cannot switch!");
 		} 
 	}
+	
 
 	/** Plays camelotReinforcement training card */
 	public void play(CamelotReinforcements camReinforcement) {
 		camReinforcement.actUpon(this);
 	}
 
+	
 	/**
 	 * Plays cards that implements ActUponDueler (AnthraxAsylum,
 	 * HolyHealthPotion, JoustingPractice and StatusAdvance)
