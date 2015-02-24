@@ -51,6 +51,15 @@ public abstract class Dueler extends Card implements Advanceable {
 	public void addMaxHP(int increment) {
 		maxHP += increment;
 	}
+	
+	/**
+	 * Gets the value of maxHP
+	 * @return - maxHP
+	 */
+	public int getMaxHP() {
+		return maxHP;
+	}
+
 
 	/**
 	 * Calls dueler to attack another dueler
