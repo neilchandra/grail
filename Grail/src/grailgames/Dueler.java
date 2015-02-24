@@ -4,19 +4,25 @@ public abstract class Dueler extends Card implements Advanceable {
 	// to be implemented, just here for coding purposes
 
 	/** The maximum health the dueler can have */
-	private int maxHP;
+	protected int maxHP;
 
 	/** The current value of the dueler's HP */
-	private int currentHP;
+	protected int currentHP;
+
+	/** The current attack of the dueler */
+	protected String currentAttack;
 
 	/** The experience a dueler has in combat */
-	private int xp;
+	protected int xp;
 
 	/** The title which the dueler has */
-	private String currentStage;
+	protected String currentStage;
+	
+	/** The attack damage of the currentAttack */
+	protected int currentDamage;
 
 	/** Whether the dueler is alive or not */
-	private boolean isAlive;
+	protected boolean isAlive;
 	
 	/**
 	 * Adds HP points to a Dueler, but not exceeding maxHP
@@ -65,15 +71,6 @@ public abstract class Dueler extends Card implements Advanceable {
 	public abstract void attack(CowardlyDueler dueler);
 	public abstract void attack(PureDueler dueler);
 	public abstract void attack(RoyalDueler dueler);
-
-
-	/**
-	 * Calls dueler to attack another dueler
-	 * 
-	 * @param dueler
-	 *            - the dueler to be attacked
-	 * */
-	public abstract void attack(Dueler dueler);
 
 
 	@Override
