@@ -59,6 +59,12 @@ public abstract class Dueler extends Card implements Advanceable {
 	public int getMaxHP() {
 		return maxHP;
 	}
+	
+	/** double dispatch attack methods */
+	public abstract void attack(BraveDueler dueler);
+	public abstract void attack(CowardlyDueler dueler);
+	public abstract void attack(PureDueler dueler);
+	public abstract void attack(RoyalDueler dueler);
 
 
 	/**
