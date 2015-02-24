@@ -58,6 +58,25 @@ public abstract class Dueler extends Card implements Advanceable {
 	 */
 	public int getMaxHP() {
 		return maxHP;
+<<<<<<< HEAD
+=======
+	}
+
+
+	/**
+	 * Calls dueler to attack another dueler
+	 * 
+	 * @param dueler
+	 *            - the dueler to be attacked
+	 * */
+	public abstract void attack(Dueler dueler);
+
+
+	@Override
+	public String toString() {
+		return (this.currentStage + " " + this.name + ": HP - "
+				+ this.currentHP + "MaxHP - " + this.maxHP + " XP - " + xp);
+>>>>>>> branch 'master' of https://github.com/neilchandra/grail.git
 	}
 
 
