@@ -21,6 +21,9 @@ public class Concorde extends BraveDueler {
 
 	public Concorde() {
 		this.name = "Concorde";
+		currentAttack = firstAttack;
+		currentDamage = firstDamage;
+		currentStage = firstStage;
 	}
 	
 	@Override

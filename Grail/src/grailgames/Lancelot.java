@@ -25,6 +25,9 @@ public class Lancelot extends BraveDueler {
 
 	public Lancelot() {
 		this.name = "Lancelot";
+		currentAttack = firstAttack;
+		currentDamage = firstDamage;
+		currentStage = firstStage;
 	}
 	
 	@Override
