@@ -1,26 +1,25 @@
 package grailgames;
 
-public class Concorde extends BraveDueler {
-
+public class Merek extends CowardlyDueler {
 	//stages
 	private final String firstStage = "Peasant";
-	private final String secondStage = "CC";
+	private final String secondStage = "Minstrel";
 	
 	//attacks
-	private final String firstAttack = "Brave Bite";
-	private final String secondAttack = "Concorde's Conqueror";
+	private final String firstAttack = "Ballad Bash";
+	private final String secondAttack = "Lute Laceration";
 	
 	//damage
-	private final int firstDamage = 30;
-	private final int secondDamage = 30;
+	private final int firstDamage = 0;
+	private final int secondDamage = 50;
 	
 	//hp limits
-	private final int firstMaxHP = 40;
-	private final int secondMaxHP = 70;
+	private final int firstMaxHP = 100;
+	private final int secondMaxHP = 150;
 
 
-	public Concorde() {
-		name = "Concorde";
+	public Merek() {
+		name = "Merek";
 		isAlive = true;
 		currentAttack = firstAttack;
 		currentDamage = firstDamage;
@@ -49,21 +48,21 @@ public class Concorde extends BraveDueler {
 	
 	@Override
 	public void attack(BraveDueler dueler) {
-		dueler.subHP(currentDamage);
+		dueler.subHP(currentDamage + 20);
 	}
 
 	@Override
 	public void attack(CowardlyDueler dueler) {
-		dueler.subHP(currentDamage - 20);
-	}
-
-	@Override
-	public void attack(PureDueler dueler) {
 		dueler.subHP(currentDamage);
 	}
 
 	@Override
+	public void attack(PureDueler dueler) {
+		dueler.subHP(currentDamage - 20);
+	}
+
+	@Override
 	public void attack(RoyalDueler dueler) {
-		dueler.subHP(currentDamage + 20);
+		dueler.subHP(currentDamage);
 	}
 }
