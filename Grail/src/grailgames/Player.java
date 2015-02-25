@@ -5,14 +5,16 @@ import java.io.BufferedReader;
 
 public class Player {
 
-	Dueler[] field;
-	ArrayList<Card> hand;
+	private String name;
+	public Dueler[] field;
+	public ArrayList<Card> hand;
 	ArrayList<Card> deck;
 
-	public Player(ArrayList<Card> deck) {
+	public Player(String name, ArrayList<Card> deck) {
+		this.name = name;
+		this.deck = deck;
 		this.field = new Dueler[7];
 		this.hand = new ArrayList<Card>();
-		this.deck = deck;
 	}
 	
 	/** Find the next available spot in the field
@@ -32,14 +34,18 @@ public class Player {
 	 *
 	 * @param dueler - the dueler to be played
 	 */
-	public void play(Dueler dueler) {
+	public void addDuelerToField(int duelerLocation) {
+		// Find empty spot in field
 		int index = findEmptySpot();
+	
+		// If there is an empty spot add Dueler, if not, print message
 		if(index != -1){
-			field[index] = dueler;
+			field[index] = (Dueler) hand.get(duelerLocation);
 		} else {
 			System.out.println("Your field is full! You cannot put a dueler on the field.");
 		}
 	}
+	
 	
 	/** Switches dueler in the arena with the dueler from the bench
 	 * 
@@ -65,22 +71,7 @@ public class Player {
 	}
 	
 
-	/** Plays camelotReinforcement training card */
-	public void play(CamelotReinforcements camReinforcement) {
-		camReinforcement.actUpon(this);
-	}
 
-	
-	/**
-	 * Plays cards that implements ActUponDueler (AnthraxAsylum,
-	 * HolyHealthPotion, JoustingPractice and StatusAdvance)
-	 * 
-	 * @param trainCard - The training card to be played
-	 * @param dueler - The dueler which the training card acts upon
-	 */
-	public void play(ActUponDueler trainCard, Dueler dueler) {
-		trainCard.actUpon(dueler);
-	}
 	
 	/** Draws cards from deck and places in hand */
 	public void drawCard() {
