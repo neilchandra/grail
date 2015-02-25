@@ -66,6 +66,27 @@ public abstract class Dueler extends Card implements Advanceable {
 		return maxHP;
 	}
 	
+	/**
+	 * Increments the current xp by 1
+	 */
+	public void addOneXP() {
+		xp += 1;
+	}
+	
+	/**
+	 * Resets xp to 0
+	 */
+	public void xpToZero() {
+		xp = 0;
+	}
+	
+	/**
+	 * Exiles the dueler (i.e. sets isAlive to false)
+	 */
+	public void exile() {
+		isAlive = false;
+	}
+	
 	/** double dispatch attack methods */
 	public abstract void attack(BraveDueler dueler);
 	public abstract void attack(CowardlyDueler dueler);
