@@ -107,6 +107,7 @@ public class Player {
 		if (!hand.isEmpty()) {
 			for (Card c : hand) {
 				System.out.println(index + ". " + c.getName());
+				index++;
 			}
 		} else {
 			System.out.println("Your hand is empty!");
