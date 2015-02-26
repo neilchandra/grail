@@ -1,7 +1,7 @@
 package grailgames;
 
 import java.util.ArrayList;
-import java.io.BufferedReader;
+
 
 public class Player {
 
@@ -70,7 +70,13 @@ public class Player {
 		} 
 	}
 	
-
+	/** Returns the name of the dueler
+	 * 
+	 * @return - the name of the dueler
+	 */
+	public String getName() {
+		return this.name;
+	}
 
 	
 	/** Draws cards from deck and places in hand */

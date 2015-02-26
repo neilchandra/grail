@@ -16,7 +16,5 @@ public abstract class Card {
 	 * Performs specific card's action, moves dueler into field
 	 * or enacts a training cards ability
 	 */
-	public void play() {
-		
-	}
+	public abstract void play(Player player, int index);
 }

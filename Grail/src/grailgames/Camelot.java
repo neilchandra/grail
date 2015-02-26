@@ -11,7 +11,7 @@ public class Camelot {
 	// variable declaration
 
 	// players
-	Player p1, p2, currentPlayer;
+	Player p1, p2, currentPlayer, otherPlayer;
 	// deckgetter
 	GrailIO deckGetter;
 	// deck files
@@ -54,9 +54,11 @@ public class Camelot {
 		p1 = new Player("Player 1", player1Deck);
 		p2 = new Player("Player 2", player2Deck);
 		currentPlayer = p1;
+		otherPlayer = p2;
 
+		//*****************************************************************************************************************************
 		//kevin changes
-/*
+
 		// Opening game introduction
 		System.out.println("Welcome to the Grail Games!");
 		System.out.println("Welcome to the Arena!");
@@ -71,7 +73,7 @@ public class Camelot {
 			String command = read.readLine();
 			String[] brokenCommand = command.split(" ");
 			
-			// 
+			// Perform action based on command
 			if(brokenCommand.length > 2){
 				System.out.println("Invalid input! Please input one of the following commands: 'print field', 'print hand', 'attack', 'switch [number]', 'play [number] or pass");
 			} else {
@@ -91,7 +93,7 @@ public class Camelot {
 				
 				
 				if(brokenCommand[0].equals("attack")) {
-					currentPlayer.field[0].attack(otherPlayer.field[0]); // Problem all duelers in field are type Dueler
+					currentPlayer.field[0].attack(otherPlayer.field[0]);
 				}
 				
 				
@@ -105,7 +107,10 @@ public class Camelot {
 					int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
 					
 					if(cardNumber < currentPlayer.hand.size() && cardNumber > 0) {
-						// Code that calls the appropiate play method for that Card
+						// Code that calls the approiate play method for that Card
+						currentPlayer.hand.get(cardNumber).play(this, cardNumber)
+						
+						
 					} else {
 						System.out.println("The number for this card do not exist in your hand. Please enter a valid card number.");
 					}
@@ -126,7 +131,7 @@ public class Camelot {
 				d.addOneXP();
 			}
 		}
-		*/
+		
 		
 		
 	}

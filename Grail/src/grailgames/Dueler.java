@@ -102,5 +102,33 @@ public abstract class Dueler extends Card implements Advanceable {
 		return (this.currentStage + " " + this.name + ": HP - "
 				+ this.currentHP + "MaxHP - " + this.maxHP + " XP - " + xp);
 	}
+	
+	/** Moves the dueler into the next available spot in field starting with the arena */
+	public void play(Player player, int index) {
+		if(player.field[0] != null) {
+			player.field[0] = (Dueler) player.hand.get(index);
+		} else {
+			int openSpot = findOpenSpot(player);
+			if(openSpot != -1) {
+				player.field[openSpot] = (Dueler) player.hand.get(index);
+			} else {
+				System.out.println("Your field is full! You cannot play this dueler!");
+			}
+		}
+		
+	}
+	
+	/** Finds the next available spot open on the bench
+	 * 
+	 *  @return - returns the index which is open or -1 to represent a full bench
+	 *  */
+	public int findOpenSpot(Player player) {
+		for(int x = 1; x < 7; x++) {
+			if(player.field[x] != null) {
+				return x;
+			}
+		}
+		return -1;
+	}
 
 }
