@@ -14,14 +14,25 @@ public class Game {
 	Player p1, p2, currentPlayer, otherPlayer;
 
 	// deck files
-	String [] deckFileNames;
-	String [] playerNames;
+	String [] deckFileNames = new String [2];
+	String [] playerNames = new String [2];
 	// Buffered reader for user input
 	BufferedReader user;
 	// variable for current card called
 	Integer currentCard = null;
 	
-	public Game() {
+	public Game(String[] args) {
+		if(args.length == 4){
+			playerNames[0] = args[0];
+			playerNames[1] = args[2];
+			deckFileNames[0] = args[1];
+			deckFileNames[1] = args[3];
+			
+		} else {
+			System.out.println("Usage: grailgames.Game <Player 1 Name> <Deck 1> <Player 2 Name> <Deck 2>");
+			System.exit(1);
+		}
+		
 		try {
 			playGame();
 		} catch (IOException e) {
@@ -35,29 +46,6 @@ public class Game {
 		//welcome to the game
 		System.out.println("Welcome to the Grail Games!");
 		
-		// initialize game
-		deckFileNames = new String[2];
-		playerNames = new String[2];
-
-		user = new BufferedReader(new InputStreamReader(System.in));
-		for (int i = 1; i < 3; i++) {
-			System.out.println("Input the name of Deck " + i + ":");
-			String lineUser = user.readLine();
-			while (lineUser.equals("")) { // in case of no input
-				System.out.println("Please input a file name!");
-				lineUser = user.readLine();
-			}
-			deckFileNames[i - 1] = lineUser;
-		}
-		for (int i = 1; i < 3; i++) {
-			System.out.println("Input the name of Player " + i + ":");
-			String lineUser = user.readLine();
-			while (lineUser == null) { // in case of no input
-				System.out.println("Please input a Player name!");
-				lineUser = user.readLine();
-			}
-			playerNames[i - 1] = lineUser;
-		}
 
 		ArrayList<Card> player1Deck;
 		ArrayList<Card> player2Deck;
@@ -106,20 +94,22 @@ public class Game {
 		//check legality of commands
 		//do actions
 		//switch turn if either attack or pass, i.e. switch players, increment counters etc.
-	/*
-		while(true) { //change to game over condition
+	
+		int x = 0; //temporary
+		while(x == 0) { //change to game over condition
 			//Announce player's turn
 			System.out.println();
 			System.out.println(currentPlayer.getName() + "'s turn.");
+			
+			x++;
 		}
-	*/	
 		
-		System.out.println(currentPlayer.getName() + " it's your turn!");
-		
-		while(true) {
-			// Announce which player's turn it is
+
+	
+/*		while(true) {
 			
-			
+	
+
 			// Read command in and break in words 
 			String command = user.readLine();
 			String[] brokenCommand = command.split(" ");
@@ -181,10 +171,10 @@ public class Game {
 					d.addOneXP();
 				}
 			}
-		}
 		
+		}	
 
-		
+	*/	
 	}
 
 
@@ -292,9 +282,10 @@ public class Game {
 		currentPlayer.addDuelerToField(duelerIndex);
 	}
 
-	
 	public static void main(String[] args) {
-		Game g = new Game();
+
+		Game g = new Game(args);
+
 	}
 
 }
