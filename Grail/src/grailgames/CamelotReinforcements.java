@@ -3,7 +3,7 @@ package grailgames;
 public class CamelotReinforcements extends TrainingCard {
 
 	@Override
-	public void play(Camelot c) {
+	public void play(Game c) {
 		c.currentPlayer.drawCard();
 		c.currentPlayer.drawCard();
 		c.currentPlayer.drawCard();

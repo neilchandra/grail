@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class Camelot {
+public class Game {
 
 	// variable declaration
 
@@ -21,7 +21,7 @@ public class Camelot {
 	// variable for current card called
 	Integer currentCard = null;
 	
-	public Camelot() {
+	public Game() {
 		try {
 			playGame();
 		} catch (IOException e) {
@@ -294,7 +294,7 @@ public class Camelot {
 
 	
 	public static void main(String[] args) {
-		Camelot c = new Camelot();
+		Game g = new Game();
 	}
 
 }

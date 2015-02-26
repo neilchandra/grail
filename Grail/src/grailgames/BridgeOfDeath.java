@@ -3,7 +3,7 @@ package grailgames;
 public class BridgeOfDeath  extends TrainingCard  {
 
 	@Override
-	public void play(Camelot c) {
+	public void play(Game c) {
 		System.out.println("Select a Dueler:");
 		System.out.println("0 for the battling Duelers, 1-6 for the bench");
 		try {
