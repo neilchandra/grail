@@ -7,6 +7,12 @@ public class CowardlyHolyHealthPotion extends HolyHealthPotion {
 		dueler.healByCowardly();
 	}
 
+	@Override
+	public void play(Camelot c) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/*
 	 * @Override(non-Javadoc)
 	 * @see grailgames.HolyHealthPotion#play(grailgames.Player, int)

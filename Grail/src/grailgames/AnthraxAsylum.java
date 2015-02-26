@@ -9,7 +9,7 @@ public class AnthraxAsylum extends TrainingCard implements ActUponDueler {
 		System.out.println(dueler.getName() + "'s health was fully restored");
 	}
 
-	public void play(Player player, int index) {
+	public void play(Camelot c) {
 		if(field[/* variable from reader */] != null) {
 			actUpon(player.field[/* variable from reader*/]);
 			

@@ -7,6 +7,12 @@ public class BraveHolyHealthPotion extends HolyHealthPotion {
 		dueler.healByBrave();
 	}
 
+	@Override
+	public void play(Camelot c) {
+		// TODO Auto-generated method stub
+		
+	}
+
 /*	@Override
 	public void play(Player player, int index) {
 		// read in the index for dueler, P

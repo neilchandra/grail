@@ -9,9 +9,9 @@ public class StatusAdvance extends TrainingCard implements ActUponDueler {
 	}
 	
 	@Override
-	public void play(Player player, int index){
+	public void play(Camelot c){
 		// read in dueler index, P
-
+/*
 		if (player.field[P] != null) {
 			if (player.field[P].getXP() >= 3) {
 				actUpon(player.field[P]);
@@ -24,6 +24,6 @@ public class StatusAdvance extends TrainingCard implements ActUponDueler {
 		}
 
 		player.hand.remove(index);
-		
+	*/	
 	}
 }

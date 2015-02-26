@@ -14,8 +14,8 @@ public class CamelotReinforcements extends TrainingCard {
 	}
 
 	@Override
-	public void play(Player player, int index) {
-		actUpon(player);
-		player.hand.remove(index);
+	public void play(Camelot c) {
+		//actUpon(player);
+		//player.hand.remove(index);
 	}
 }

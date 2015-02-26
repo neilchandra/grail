@@ -10,7 +10,7 @@ public class JoustingPractice extends TrainingCard implements ActUponDueler {
 	}
 	
 	@Override 
-	public void play(Player player, int index) {
+	public void play(Camelot c) {
 		// get dueler number from reader, P
 		
 		if(player.field[P] != null) {
