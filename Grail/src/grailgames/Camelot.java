@@ -158,10 +158,10 @@ public class Camelot {
 					int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
 					
 					if(cardNumber < currentPlayer.hand.size() && cardNumber > 0) {
-						// Code that calls the appropiate play method for that Card
+						// Code that calls the appropriate play method for that Card
 						currentPlayer.hand.get(cardNumber).play(this);
 					} else {
-						System.out.println("The card is not in your hand.");
+						System.out.println("This isn't a valid card number.");
 					}
 				}
 
