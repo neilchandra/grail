@@ -107,8 +107,8 @@ public class Camelot {
 					int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
 					
 					if(cardNumber < currentPlayer.hand.size() && cardNumber > 0) {
-						// Code that calls the approiate play method for that Card
-						currentPlayer.hand.get(cardNumber).play(this, cardNumber)
+						// Code that calls the appropiate play method for that Card
+						currentPlayer.hand.get(cardNumber).play(currentPlayer, cardNumber);
 						
 						
 					} else {
