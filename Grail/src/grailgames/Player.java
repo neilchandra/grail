@@ -66,7 +66,7 @@ public class Player {
 				field[index] = field[0];
 			}
 		} else {
-			System.out.println("There is no dueler in the arena. You cannot switch!");
+			System.out.println("No a valid switch!");
 		} 
 	}
 	
@@ -85,7 +85,7 @@ public class Player {
 			hand.add(deck.get(1));
 			deck.remove(1);
 		} else {
-			System.out.println("Your deck is empty! Fight to the death!");
+			System.out.println(name + "'s deck is empty.");
 		}
 	}
 
