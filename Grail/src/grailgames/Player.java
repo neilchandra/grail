@@ -51,8 +51,11 @@ public class Player {
 	 * 
 	 *  @param index - index of Dueler on the bench */
 	public void switchDueler(int index) {
-		if(field[0] != null) {
+		if(field[0] != null) { 
 			if(field[index] != null) {
+				
+				System.out.println(field[0].getName()+" was placed on the bench!");
+				System.out.println(field[index].getName()+" has entered the battle position!");
 				
 				// stores the dueler at index in the field
 				Dueler tempD = field[index];
@@ -71,6 +74,7 @@ public class Player {
 			if(field[index] == null){
 				System.out.println("Not a valid switch!");	
 			} else { //battle position empty but bench slot not empty
+				System.out.println(field[index].getName()+" has entered the battle position!");
 				field[0] = field[index];
 				field[index] = null;
 			}
@@ -91,7 +95,7 @@ public class Player {
 	public void drawCard() {
 		if (!deck.isEmpty()) {
 			hand.add(deck.remove(0));
-			System.out.println(name+" drew a card!");
+			System.out.println(name+" drew a card.");
 		} else {
 			System.out.println(name + "'s deck is empty.");
 		}

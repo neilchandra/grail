@@ -38,7 +38,7 @@ public abstract class Dueler extends Card implements Advanceable {
 	
 	@Override
 	public String getName() {
-		return (currentStage+" "+name);	
+		return (currentStage + " " + name);	
 	}
 	
 	/**

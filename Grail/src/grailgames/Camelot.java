@@ -94,7 +94,11 @@ public class Camelot {
 		//do actions
 		//switch turn if either attack or pass, i.e. switch players, increment counters etc.
 		
-		
+		while(true) { //change to game over condition
+			//Announce player's turn
+			System.out.println();
+			System.out.println(currentPlayer.getName() + "'s turn.");
+		}
 		
 		
 		
@@ -230,6 +234,9 @@ public class Camelot {
 				break;
 			case "Peasant Patsy":
 				deck.add(new Patsy());
+				break;
+			case "Bridge of Death":
+				deck.add(new BridgeOfDeath());
 				break;
 			default:
 				// do nothing
