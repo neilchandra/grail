@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//kevin is $$$$
+
 public class Camelot {
 
 	// variable declaration
@@ -26,7 +26,6 @@ public class Camelot {
 			playGame();
 		} catch (IOException e) {
 			System.out.println("IOException: game unable to start");
-			4\
 		}
 	}
 
@@ -67,6 +66,11 @@ public class Camelot {
 		System.out.println("Welcome to the Arena!");
 		System.out.println(p1.getName() + " vs. " + p2.getName());
 		System.out.println("Let the games begin!");	
+		
+		
+		
+		
+		
 		
 		while(!isGameOver()) {
 			// Announce which player's turn it is
@@ -111,7 +115,7 @@ public class Camelot {
 					
 					if(cardNumber < currentPlayer.hand.size() && cardNumber > 0) {
 						// Code that calls the appropiate play method for that Card
-						currentPlayer.hand.get(cardNumber).play(currentPlayer, cardNumber);
+						currentPlayer.hand.get(cardNumber).play(this);
 					} else {
 						System.out.println("The number for this card do not exist in your hand. Please enter a valid card number.");
 					}
@@ -137,9 +141,6 @@ public class Camelot {
 		
 	}
 
-	public static void main(String[] args) {
-		Camelot c = new Camelot();
-	}
 
 	/**
 	 * Reads Deck file and constructs the deck, an arraylist of cards
@@ -242,13 +243,9 @@ public class Camelot {
 		currentPlayer.addDuelerToField(duelerIndex);
 	}
 
-	public void play(CamelotReinforcements cam) {
-		cam.actUpon(currentPlayer);
+	
+	public static void main(String[] args) {
+		Camelot c = new Camelot();
 	}
-
-	public void useCard(HolyHealthPotion hHP) {
-		// prompt for the dueler, indicated by number from field
-		
-		//hp.actUpon()
-	}
+	
 }
