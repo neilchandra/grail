@@ -43,8 +43,9 @@ public class Camelot {
 		for (int i = 1; i < 3; i++) {
 			System.out.println("Input the name of Deck " + i + ":");
 			String lineUser = user.readLine();
-			while (lineUser == null) { // in case of no input
+			while (lineUser.equals("")) { // in case of no input
 				System.out.println("Please input a file name!");
+				lineUser = user.readLine();
 			}
 			deckFileNames[i - 1] = lineUser;
 		}
@@ -53,6 +54,7 @@ public class Camelot {
 			String lineUser = user.readLine();
 			while (lineUser == null) { // in case of no input
 				System.out.println("Please input a Player name!");
+				lineUser = user.readLine();
 			}
 			playerNames[i - 1] = lineUser;
 		}
