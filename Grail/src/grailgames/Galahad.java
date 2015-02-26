@@ -59,23 +59,4 @@ public class Galahad extends PureDueler {
 		}
 	}
 
-	@Override
-	public void attack(BraveDueler dueler) {
-		dueler.subHP(currentDamage);
-	}
-
-	@Override
-	public void attack(CowardlyDueler dueler) {
-		dueler.subHP(currentDamage + 20);
-	}
-
-	@Override
-	public void attack(PureDueler dueler) {
-		dueler.subHP(currentDamage);
-	}
-
-	@Override
-	public void attack(RoyalDueler dueler) {
-		dueler.subHP(currentDamage - 20);
-	}
 }

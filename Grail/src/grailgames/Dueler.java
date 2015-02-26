@@ -87,11 +87,14 @@ public abstract class Dueler extends Card implements Advanceable {
 		isAlive = false;
 	}
 	
-	/** double dispatch attack methods */
-	public abstract void attack(BraveDueler dueler);
-	public abstract void attack(CowardlyDueler dueler);
-	public abstract void attack(PureDueler dueler);
-	public abstract void attack(RoyalDueler dueler);
+	/** attack method */
+	public abstract void attack(Dueler dueler);
+
+	/** attacked by methods */
+	public abstract void attackedByBrave(int damage);
+	public abstract void attackedByCowardly(int damage);
+	public abstract void attackedByPure(int damage);
+	public abstract void attackedByRoyal(int damage);
 
 
 	@Override
