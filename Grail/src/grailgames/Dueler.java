@@ -81,6 +81,14 @@ public abstract class Dueler extends Card implements Advanceable {
 	}
 	
 	/**
+	 * Returns the XP of the dueler
+	 * @return - the xp of the dueler
+	 */
+	public int getXP() {
+		return this.xp;
+	}
+	
+	/**
 	 * Exiles the dueler (i.e. sets isAlive to false)
 	 */
 	public void exile() {
