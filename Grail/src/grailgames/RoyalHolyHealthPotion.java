@@ -3,7 +3,7 @@ package grailgames;
 public class RoyalHolyHealthPotion extends HolyHealthPotion {
 	
 	@Override
-	public void heal(Dueler dueler){
+	public void actUpon(Dueler dueler){
 		dueler.healByRoyal();
 	}
 

@@ -9,17 +9,5 @@ public class JoustingPractice extends TrainingCard implements ActUponDueler {
 		dueler.addHP(20);
 	}
 	
-	@Override 
-	public void play(Camelot c) {
-		// get dueler number from reader, P
-		
-		if(player.field[P] != null) {
-			actUpon(player.field[P]);
-		} else {
-			System.out.println("No effect.");
-		}
-		
-		player.hand.remove(index);
-	}
 	
 }
