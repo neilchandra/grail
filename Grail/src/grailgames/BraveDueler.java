@@ -29,4 +29,29 @@ public abstract class BraveDueler extends Dueler {
 		
 	}
 
+	@Override
+	public void healByBrave() {
+		addHP(30);
+	}
+
+	@Override
+	public void healByCowardly() {
+		addHP(10);
+		
+	}
+
+	@Override
+	public void healByPure() {
+		addHP(10);
+		
+	}
+
+	@Override
+	public void healByRoyal() {
+		addHP(10);
+		
+	}
+	
+	
+
 }

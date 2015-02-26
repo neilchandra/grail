@@ -103,6 +103,8 @@ public abstract class Dueler extends Card implements Advanceable {
 	public abstract void attackedByCowardly(int damage);
 	public abstract void attackedByPure(int damage);
 	public abstract void attackedByRoyal(int damage);
+	
+	/** heal by holy health potion */
 	public abstract void healByBrave();
 	public abstract void healByCowardly();
 	public abstract void healByPure();

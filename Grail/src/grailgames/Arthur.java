@@ -58,4 +58,5 @@ public class Arthur extends RoyalDueler {
 				break;
 		}
 	}
+
 }
