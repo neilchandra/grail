@@ -25,6 +25,7 @@ public class Camelot {
 		try {
 			playGame();
 		} catch (IOException e) {
+			e.printStackTrace();
 			System.out.println("IOException: game unable to start");
 		}
 	}
@@ -39,7 +40,7 @@ public class Camelot {
 		playerNames = new String[2];
 
 		user = new BufferedReader(new InputStreamReader(System.in));
-		for (int i = 1; i <= 3; i++) {
+		for (int i = 1; i < 3; i++) {
 			System.out.println("Input the name of Deck " + i + ":");
 			String lineUser = user.readLine();
 			while (lineUser == null) { // in case of no input
@@ -47,7 +48,7 @@ public class Camelot {
 			}
 			deckFileNames[i - 1] = lineUser;
 		}
-		for (int i = 1; i <= 3; i++) {
+		for (int i = 1; i < 3; i++) {
 			System.out.println("Input the name of Player " + i + ":");
 			String lineUser = user.readLine();
 			while (lineUser == null) { // in case of no input
@@ -56,11 +57,21 @@ public class Camelot {
 			playerNames[i - 1] = lineUser;
 		}
 
-		// getDecks using deckGetter
-		ArrayList<Card> player1Deck = buildDeck(GrailIO
-				.getDeck(deckFileNames[0]));
-		ArrayList<Card> player2Deck = buildDeck(GrailIO
-				.getDeck(deckFileNames[1]));
+		ArrayList<Card> player1Deck;
+		ArrayList<Card> player2Deck;
+		
+		try{
+			player1Deck = buildDeck(GrailIO
+					.getDeck(deckFileNames[0]));			
+		} catch (IOException e) {
+			player1Deck = new ArrayList<Card>(0);
+		}
+		try{
+			player2Deck = buildDeck(GrailIO
+					.getDeck(deckFileNames[1]));			
+		} catch (IOException e) {
+			player2Deck = new ArrayList<Card>(0);
+		}
 		
 		//incase deck files are not found/empty
 		if(player1Deck.isEmpty()){
@@ -93,7 +104,7 @@ public class Camelot {
 		//check legality of commands
 		//do actions
 		//switch turn if either attack or pass, i.e. switch players, increment counters etc.
-		
+/*		
 		while(true) { //change to game over condition
 			//Announce player's turn
 			System.out.println();
@@ -167,7 +178,7 @@ public class Camelot {
 			}
 		}
 		
-		
+		*/
 		
 	}
 
@@ -280,5 +291,5 @@ public class Camelot {
 	public static void main(String[] args) {
 		Camelot c = new Camelot();
 	}
-	
+
 }
