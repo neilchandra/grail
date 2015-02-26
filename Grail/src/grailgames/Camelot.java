@@ -18,12 +18,15 @@ public class Camelot {
 	String[] deckFileNames;
 	// Buffered reader for user input
 	BufferedReader user;
+	// variable for current card called
+	Integer currentCard = null;
 	
 	public Camelot() {
 		try {
 			playGame();
 		} catch (IOException e) {
 			System.out.println("IOException: game unable to start");
+			4\
 		}
 	}
 

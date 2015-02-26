@@ -118,13 +118,13 @@ public abstract class Dueler extends Card implements Advanceable {
 	}
 	
 	/** Moves the dueler into the next available spot in field starting with the arena */
-	public void play(Player player, int index) {
-		if(player.field[0] != null) {
-			player.field[0] = (Dueler) player.hand.get(index);
+	public void play(Camelot c) {
+		if(c.currentPlayer.field[0] != null) {
+			c.currentPlayer.field[0] = (Dueler) c.currentPlayer.hand.get(c.currentCard);
 		} else {
-			int openSpot = findOpenSpot(player);
+			int openSpot = findOpenSpot(c.currentPlayer);
 			if(openSpot != -1) {
-				player.field[openSpot] = (Dueler) player.hand.get(index);
+				c.currentPlayer.field[openSpot] = (Dueler) c.currentPlayer.hand.get(c.currentCard);
 			} else {
 				System.out.println("Your field is full! You cannot play this dueler!");
 			}
