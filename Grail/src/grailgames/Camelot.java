@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//keving is $$$$
+//kevin is $$$$
 public class Camelot {
 
 	// variable declaration
