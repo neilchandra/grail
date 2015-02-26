@@ -104,7 +104,7 @@ public class Player {
 	/** Prints the entire hand of the player */
 	public void printHand() {
 		int index = 0;
-		if (hand.isEmpty()) {
+		if (!hand.isEmpty()) {
 			for (Card c : hand) {
 				System.out.println(index + ". " + c.getName());
 			}
@@ -115,14 +115,26 @@ public class Player {
 
 	/** Prints the player's field */
 	public void printField() {
-		int index = 0;
-		for (int x = 0; x < 7; x++) {
-			if (field[x] == null) {
-				System.out.println(index + ". empty");
-			} else {
-				System.out.println(index + ". " + field[x].toString());
+
+		System.out.println(name + "'s field");
+		for (int x = 0; x < field.length; x++) {
+			if (x == 0) {
+				System.out.print("	Battle Position: ");
+				if (field[x] == null) {
+					System.out.println("Empty");
+				} else {
+					System.out.println(field[x].toString());
+				}
+				System.out.println("	Bench:");
+			} else if (x > 0) {
+				if (field[x] == null) {
+					System.out.println("	" + x + ".	Empty");
+				} else {
+
+					System.out.println("	" + x + ".	 " + field[x].toString());
+				}
 			}
 		}
 	}
-
 }
+	

@@ -104,21 +104,21 @@ public class Camelot {
 		//check legality of commands
 		//do actions
 		//switch turn if either attack or pass, i.e. switch players, increment counters etc.
-/*		
+	/*
 		while(true) { //change to game over condition
 			//Announce player's turn
 			System.out.println();
 			System.out.println(currentPlayer.getName() + "'s turn.");
 		}
+	*/	
 		
 		
-		
-		while(!isGameOver()) {
+		while(true) {
 			// Announce which player's turn it is
 			System.out.println(currentPlayer.getName() + " it's your turn!");
 			
 			// Read command in and break in words 
-			String command = read.readLine();
+			String command = user.readLine();
 			String[] brokenCommand = command.split(" ");
 			
 			// Perform action based on command
@@ -174,11 +174,13 @@ public class Camelot {
 			}
 			
 			for(Dueler d : currentPlayer.field) {
-				d.addOneXP();
+				if(d != null) {
+					d.addOneXP();
+				}
 			}
 		}
 		
-		*/
+
 		
 	}
 
