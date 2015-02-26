@@ -103,6 +103,10 @@ public abstract class Dueler extends Card implements Advanceable {
 	public abstract void attackedByCowardly(int damage);
 	public abstract void attackedByPure(int damage);
 	public abstract void attackedByRoyal(int damage);
+	public abstract void healByBrave();
+	public abstract void healByCowardly();
+	public abstract void healByPure();
+	public abstract void healByRoyal();
 
 
 	@Override
@@ -139,4 +143,5 @@ public abstract class Dueler extends Card implements Advanceable {
 		return -1;
 	}
 
+	
 }

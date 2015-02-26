@@ -3,22 +3,24 @@ package grailgames;
 public class CowardlyHolyHealthPotion extends HolyHealthPotion {
 
 	@Override
-	public void actUpon(PureDueler dueler) {
-		 dueler.addHP(10);
-	}
-	
-	@Override
-	public void actUpon(BraveDueler dueler) {
-		 dueler.addHP(10);
+	public void heal(Dueler dueler){
+		dueler.healByCowardly();
 	}
 
-	@Override
-	public void actUpon(CowardlyDueler dueler) {
-		 dueler.addHP(30);
+	/*
+	 * @Override(non-Javadoc)
+	 * @see grailgames.HolyHealthPotion#play(grailgames.Player, int)
+	 */
+/*	public void play(Player player, int index) {
+		// read in the index for dueler, P
+		
+		if(player.field[P] != null) {
+			heal(player.field[P]);
+		} else {
+			System.out.println("No effet.");
+		}
+		
+		player.hand.remove(index);		
 	}
-	
-	@Override
-	public void actUpon(RoyalDueler dueler) {
-		 dueler.addHP(10);
-	}
+	*/
 }
