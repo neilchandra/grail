@@ -12,10 +12,10 @@ public class Camelot {
 
 	// players
 	Player p1, p2, currentPlayer, otherPlayer;
-	// deckgetter
-	GrailIO deckGetter;
+
 	// deck files
-	String[] deckFileNames;
+	String [] deckFileNames;
+	String [] playerNames;
 	// Buffered reader for user input
 	BufferedReader user;
 	// variable for current card called
@@ -30,9 +30,13 @@ public class Camelot {
 	}
 
 	public void playGame() throws IOException {
+		
+		//welcome to the game
+		System.out.println("Welcome to the Grail Games!");
+		
 		// initialize game
-		deckGetter = new GrailIO();
 		deckFileNames = new String[2];
+		playerNames = new String[2];
 
 		user = new BufferedReader(new InputStreamReader(System.in));
 		for (int i = 1; i <= 3; i++) {
@@ -41,32 +45,54 @@ public class Camelot {
 			while (lineUser == null) { // in case of no input
 				System.out.println("Please input a file name!");
 			}
-
 			deckFileNames[i - 1] = lineUser;
+		}
+		for (int i = 1; i <= 3; i++) {
+			System.out.println("Input the name of Player " + i + ":");
+			String lineUser = user.readLine();
+			while (lineUser == null) { // in case of no input
+				System.out.println("Please input a Player name!");
+			}
+			playerNames[i - 1] = lineUser;
 		}
 
 		// getDecks using deckGetter
-		ArrayList<Card> player1Deck = buildDeck(deckGetter
+		ArrayList<Card> player1Deck = buildDeck(GrailIO
 				.getDeck(deckFileNames[0]));
-		ArrayList<Card> player2Deck = buildDeck(deckGetter
+		ArrayList<Card> player2Deck = buildDeck(GrailIO
 				.getDeck(deckFileNames[1]));
 		
+		//incase deck files are not found/empty
+		if(player1Deck.isEmpty()){
+			System.out.println("Deck file not found!");
+		}
+		if(player2Deck.isEmpty()) {
+			System.out.println("Deck file not found!");
+		}
 		
 		//instantiate player with decks
-		p1 = new Player("Player 1", player1Deck);
-		p2 = new Player("Player 2", player2Deck);
+		p1 = new Player(playerNames[0], player1Deck);
+		p2 = new Player(playerNames[1], player2Deck);
 		currentPlayer = p1;
 		otherPlayer = p2;
 
-		//*****************************************************************************************************************************
-		//kevin changes
-
 		// Opening game introduction
-		System.out.println("Welcome to the Grail Games!");
 		System.out.println("Welcome to the Arena!");
 		System.out.println(p1.getName() + " vs. " + p2.getName());
 		System.out.println("Let the games begin!");	
 		
+		//draw 6 cards each
+		for(int i=0; i<6; i++) {
+			p1.drawCard();
+			p2.drawCard();
+		}
+		
+		
+		//objective:
+		//listen for commands
+		//check legality of commands
+		//do actions
+		//switch turn if either attack or pass, i.e. switch players, increment counters etc.
 		
 		
 		
@@ -152,7 +178,7 @@ public class Camelot {
 	public ArrayList<Card> buildDeck(String[] cards) {
 
 		// define a card arraylist
-		ArrayList<Card> deck = new ArrayList<Card>();
+		ArrayList<Card> deck = new ArrayList<Card>(0);
 
 		// iterate through array of names
 		for (String name : cards) {

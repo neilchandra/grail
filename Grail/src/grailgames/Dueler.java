@@ -36,6 +36,11 @@ public abstract class Dueler extends Card implements Advanceable {
 		}
 	}
 	
+	@Override
+	public String getName() {
+		return (currentStage+" "+name);	
+	}
+	
 	/**
 	 * Subtracts HP points from a Dueler, and sets isAlive = false
 	 * if currentHP reaches 0

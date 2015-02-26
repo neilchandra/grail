@@ -63,10 +63,18 @@ public class Player {
 			} else {
 				
 				// only moves dueler from arena to bench
+				System.out.println(field[0].getName()+" was placed on the bench!");
 				field[index] = field[0];
+				field[0] = null;
 			}
-		} else {
-			System.out.println("No a valid switch!");
+		} else { //arena position empty
+			if(field[index] == null){
+				System.out.println("Not a valid switch!");	
+			} else { //battle position empty but bench slot not empty
+				field[0] = field[index];
+				field[index] = null;
+			}
+			
 		} 
 	}
 	
@@ -81,9 +89,9 @@ public class Player {
 	
 	/** Draws cards from deck and places in hand */
 	public void drawCard() {
-		if (deck.isEmpty()) {
-			hand.add(deck.get(1));
-			deck.remove(1);
+		if (!deck.isEmpty()) {
+			hand.add(deck.remove(0));
+			System.out.println(name+" drew a card!");
 		} else {
 			System.out.println(name + "'s deck is empty.");
 		}
@@ -102,7 +110,7 @@ public class Player {
 	}
 
 	/** Prints the player's field */
-	public void printfield() {
+	public void printField() {
 		int index = 0;
 		for (int x = 0; x < 7; x++) {
 			if (field[x] == null) {
