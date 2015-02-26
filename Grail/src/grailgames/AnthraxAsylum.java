@@ -8,8 +8,7 @@ public class AnthraxAsylum extends TrainingCard implements ActUponDueler {
 		dueler.addHP(dueler.getMaxHP());			
 		System.out.println(dueler.getName() + "'s health was fully restored");
 	}
-	
-	@Override
+
 	public void play(Player player, int index) {
 		if(field[/* variable from reader */] != null) {
 			actUpon(player.field[/* variable from reader*/]);
@@ -19,5 +18,5 @@ public class AnthraxAsylum extends TrainingCard implements ActUponDueler {
 		}
 		player.hand.remove(index);                 
 	}
-	
+
 }
