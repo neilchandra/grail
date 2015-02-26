@@ -112,10 +112,11 @@ public class Camelot {
 		}
 	*/	
 		
+		System.out.println(currentPlayer.getName() + " it's your turn!");
 		
 		while(true) {
 			// Announce which player's turn it is
-			System.out.println(currentPlayer.getName() + " it's your turn!");
+			
 			
 			// Read command in and break in words 
 			String command = user.readLine();
@@ -168,7 +169,7 @@ public class Camelot {
 					Player temp = currentPlayer;
 					currentPlayer = otherPlayer;
 					otherPlayer = temp;
-					System.out.println(currentPlayer.getName() + "s turn.");
+					System.out.println(currentPlayer.getName() + " it's your turn!");
 				}
 				
 			}
