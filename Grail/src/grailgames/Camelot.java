@@ -17,6 +17,14 @@ public class Camelot {
 	String[] deckFileNames;
 	// Buffered reader for user input
 	BufferedReader user;
+	
+	public Camelot() {
+		try {
+			playGame();
+		} catch (IOException e) {
+			System.out.println("IOException: game unable to start");
+		}
+	}
 
 	public void playGame() throws IOException {
 		// initialize game
@@ -46,10 +54,84 @@ public class Camelot {
 		p2 = new Player("Player 2", player2Deck);
 		currentPlayer = p1;
 
+		//kevin changes
+/*
+		// Opening game introduction
+		System.out.println("Welcome to the Grail Games!");
+		System.out.println("Welcome to the Arena!");
+		System.out.println(p1.getName() + " vs. " + p2.getName());
+		System.out.println("Let the games begin!");	
+		
+		while(!isGameOver()) {
+			// Announce which player's turn it is
+			System.out.println(currentPlayer.getName() + " it's your turn!");
+			
+			// Read command in and break in words 
+			String command = read.readLine();
+			String[] brokenCommand = command.split(" ");
+			
+			// 
+			if(brokenCommand.length > 2){
+				System.out.println("Invalid input! Please input one of the following commands: 'print field', 'print hand', 'attack', 'switch [number]', 'play [number] or pass");
+			} else {
+				
+				if(brokenCommand[0].equals("print")) {
+					// Catches print field and calls method
+					if(brokenCommand[1].equals("field")) {
+						currentPlayer.printField();
+						otherPlayer.printField();			
+					}
+					
+					// Catches print hand and calls method
+					if(brokenCommand[1].equals("hand")) {
+						currentPlayer.printHand();
+					}	
+				}
+				
+				
+				if(brokenCommand[0].equals("attack")) {
+					currentPlayer.field[0].attack(otherPlayer.field[0]); // Problem all duelers in field are type Dueler
+				}
+				
+				
+				if(brokenCommand[0].equals("switch")) {
+					currentPlayer.switchDueler(Integer.parseInt(brokenCommand[1]));
+				}
+				
+				
+				if(brokenCommand[0].equals("play")) {
+					// Parse command and 
+					int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
+					
+					if(cardNumber < currentPlayer.hand.size() && cardNumber > 0) {
+						// Code that calls the appropiate play method for that Card
+					} else {
+						System.out.println("The number for this card do not exist in your hand. Please enter a valid card number.");
+					}
+				}
+
+				
+				
+				if(brokenCommand[0].equals("pass")) {
+					Player temp = currentPlayer;
+					currentPlayer = otherPlayer;
+					otherPlayer = temp;
+					System.out.println(currentPlayer.getName() + "s turn.");
+				}
+				
+			}
+			
+			for(Dueler d : currentPlayer.field) {
+				d.addOneXP();
+			}
+		}
+		*/
+		
+		
 	}
 
 	public static void main(String[] args) {
-		playGame();
+		Camelot c = new Camelot();
 	}
 
 	/**
@@ -160,6 +242,6 @@ public class Camelot {
 	public void useCard(HolyHealthPotion hHP) {
 		// prompt for the dueler, indicated by number from field
 		
-		hp.actUpon()
+		//hp.actUpon()
 	}
 }
