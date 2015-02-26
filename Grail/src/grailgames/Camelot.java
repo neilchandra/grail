@@ -161,7 +161,7 @@ public class Camelot {
 						// Code that calls the appropiate play method for that Card
 						currentPlayer.hand.get(cardNumber).play(this);
 					} else {
-						System.out.println("The number for this card do not exist in your hand. Please enter a valid card number.");
+						System.out.println("The card is not in your hand.");
 					}
 				}
 
