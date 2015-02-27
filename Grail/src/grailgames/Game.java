@@ -221,6 +221,16 @@ public class Game {
 			otherPlayer.field[0] = null;
 		}
 		
+		//raises hp of others if knight galahad
+		if(otherPlayer.field[0] != null && otherPlayer.field[0].isEnhancesOthers()){
+			for(int i=1; i<otherPlayer.field.length; i++){
+				if(otherPlayer.field[i] != null) {
+					otherPlayer.field[i].addHP(5);
+
+				}
+			}
+		}
+		
 		// Player's XP goes up every round they remain on the field
 		for (Dueler d : otherPlayer.field) {
 			if (d != null) {

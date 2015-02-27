@@ -25,6 +25,9 @@ public abstract class Dueler extends Card {
 	/** Whether the dueler is alive or not */
 	protected boolean isAlive;
 	
+	/** Whether the dueler raises hp of others, true for only Knight Galahad */
+	protected boolean enhancesOthers = false;
+	
 
 	/**
 	 * Adds HP points to a Dueler, but not exceeding maxHP
@@ -72,6 +75,14 @@ public abstract class Dueler extends Card {
 	 */
 	public void depleteHP() {
 		hp = 0;
+	}
+
+	/**
+	 * Indicates wheter a dueler enhances other duelers in the field
+	 * @return - enhancesOthers
+	 */
+	public boolean isEnhancesOthers() {
+		return enhancesOthers;
 	}
 
 	/**

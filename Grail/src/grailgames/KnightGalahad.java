@@ -11,6 +11,7 @@ public class KnightGalahad extends PureDueler {
 		hp = maxHP - damageTaken;
 		xp = 0;
 		arenaXP = 0;
+		enhancesOthers = true;
 	}
 	
 	@Override
