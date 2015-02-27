@@ -157,10 +157,10 @@ public class Game {
 						switchTurn();
 					}
 
-				} else if (brokenCommand[0].equals("switch")) {
+				} else if (brokenCommand[0].equals("switch")  && brokenCommand.length == 2) {
 					currentPlayer.switchDueler(Integer
 							.parseInt(brokenCommand[1]));
-				} else if (brokenCommand[0].equals("play")) {
+				} else if (brokenCommand[0].equals("play") && brokenCommand.length == 2) {
 					// Parse command and
 					int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
 					currentCard = cardNumber;
