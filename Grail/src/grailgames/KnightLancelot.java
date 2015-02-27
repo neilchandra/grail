@@ -2,13 +2,13 @@ package grailgames;
 
 public class KnightLancelot extends BraveDueler {
 	
-	public KnightLancelot(int damage) {
+	public KnightLancelot(int damageTaken) {
 		name = "Knight Lancelot";
 		attack = "Mighty Joust";
 		damage = 50;
 		isAlive = true;
 		maxHP = 140;
-		hp = maxHP - damage;
+		hp = maxHP - damageTaken;
 		xp = 0;
 		arenaXP = 0;
 	}

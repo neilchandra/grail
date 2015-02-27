@@ -2,13 +2,13 @@ package grailgames;
 
 public class KingArthur extends RoyalDueler {
 
-	public KingArthur(int damage) {
+	public KingArthur(int damageTaken) {
 		name = "King Arthur";
 		attack = "Excalibur";
 		damage = 50;
 		isAlive = true;
 		maxHP = 160;
-		hp = maxHP - damage;
+		hp = maxHP - damageTaken;
 		xp = 0;
 		arenaXP = 0;
 	}

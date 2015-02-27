@@ -2,13 +2,13 @@ package grailgames;
 
 public class CCRowan extends PureDueler {
 	
-	public CCRowan(int damage) {
+	public CCRowan(int damageTaken) {
 		name = "CC Rowan";
 		attack = "Rowan's Rampage";
 		damage = 40;
 		isAlive = true;
 		maxHP = 100;
-		hp = maxHP - damage;
+		hp = maxHP - damageTaken;
 		xp = 0;
 		arenaXP = 0;
 	}
