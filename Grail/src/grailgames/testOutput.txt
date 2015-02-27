@@ -1,0 +1,806 @@
+Gameplay Testing Log
+
+Table of Contents: Grail Kevin and Neil
+1) King Arthur Special Power + Dueler Gets Exiled
+2) Knight Robin Special Power
+3) Knight Lancelot Special Power + Advantage Brave over Royal
+4) Knight Galahad Special Power + Valid Switches
+5) Game Over Case
+6) Invalid Inputs
+
+***************************************** 1 *********************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 1
+Boy Arthur has entered the battle position!
+pass
+Kevin's turn!
+Kevin drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 3
+Page Lancelot has entered the battle position!
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+print field
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 4
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Page Lancelot: 60/60  Attack power: 20  XP: 3
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 5
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Boy Arthur has advanced to Prince Arthur!
+pass 
+Kevin's turn!
+Kevin drew a card.
+pass 
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+print field
+Kevin's field
+	Battle Position: Page Lancelot: 60/60  Attack power: 20  XP: 7
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Prince Arthur: 120/120  Attack power: 40  XP: 3
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+pass
+Neil's turn!
+Neil's deck is empty.
+play 5
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Prince Arthur has advanced to King Arthur!
+print field
+Neil's field
+	Battle Position: King Arthur: 160/160  Attack power: 50  XP: 0
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Page Lancelot: 60/60  Attack power: 20  XP: 7
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+attack
+King Arthur is not experienced enough yet to attack!
+Kevin's turn!
+Kevin's deck is empty.
+pass
+Neil's turn!
+Neil's deck is empty.
+attack
+King Arthur used Excalibur!
+King Arthur exiled Page Lancelot!
+King Arthur took 50 damage!
+Page Lancelot has fainted!
+Kevin's turn!
+Kevin's deck is empty.
+print field
+Kevin's field
+	Battle Position: Empty
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: King Arthur: 110/160  Attack power: 50  XP: 1
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+********************************* 1 ***********************************
+
+********************************* 2 ***********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+attack    
+No Dueler in battle position.
+Kevin's turn!
+Kevin drew a card.
+attack
+No Dueler in battle position.
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+8. Status Advance
+play 4
+Page Robin has entered the battle position!
+attack
+Page Robin is not experienced enough yet to attack!
+Kevin's turn!
+Kevin drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+8. Status Advance
+play 4
+Page Robin has entered the battle position!
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+play 5
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Page Robin has advanced to Squire Robin!
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil's deck is empty.
+pass
+Kevin's turn!
+Kevin's deck is empty.
+pass
+Neil's turn!
+Neil's deck is empty.
+play 5
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Squire Robin has advanced to Knight Robin!
+print field
+Neil's field
+	Battle Position: Knight Robin: 120/120  Attack power: 60  XP: 0
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Page Robin: 60/60  Attack power: 20  XP: 7
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+pass
+Kevin's turn!
+Kevin's deck is empty.
+attack
+Page Robin used Squeal!
+Knight Robin cannot be attacked at this time!
+Neil's turn!
+Neil's deck is empty.
+pass
+Kevin's turn!
+Kevin's deck is empty.
+attack
+Page Robin used Squeal!
+Knight Robin cannot be attacked at this time!
+Neil's turn!
+Neil's deck is empty.
+pass
+Kevin's turn!
+Kevin's deck is empty.
+attack
+Page Robin used Squeal!
+Knight Robin took 20 damage!
+Neil's turn!
+Neil's deck is empty.
+***************************************** 2 ***********************************
+
+***************************************** 3 ***********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 3
+Page Lancelot has entered the battle position!
+pass
+Kevin's turn!
+Kevin drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 1
+Boy Arthur has entered the battle position!
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+play 5 
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Page Lancelot has advanced to Squire Lancelot!
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+print field
+Neil's field
+	Battle Position: Squire Lancelot: 100/100  Attack power: 30  XP: 3
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 5
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 5 
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Squire Lancelot has advanced to Knight Lancelot!
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+print field
+Neil's field
+	Battle Position: Knight Lancelot: 140/140  Attack power: 50  XP: 1
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 6
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+attack
+Knight Lancelot used Mighty Joust!
+It was very effective!
+Boy Arthur took 70 damage!
+Kevin's turn!
+Kevin drew a card.
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 10/80  Attack power: 20  XP: 7
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Knight Lancelot: 140/140  Attack power: 55  XP: 1
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+***************************************** 3 *******************************
+
+***************************************** 4 *******************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 1
+Boy Arthur has entered the battle position!
+play 2
+Page Lancelot was placed on the bench!
+play 2
+Page Robin was placed on the bench!
+play 1
+Page Galahad was placed on the bench!
+pass
+Kevin's turn!
+Kevin drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 1
+Boy Arthur has entered the battle position!
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+print field
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 3
+	Bench:
+	1.	Page Lancelot: 60/60  Attack power: 20  XP: 3
+	2.	Page Robin: 60/60  Attack power: 20  XP: 3
+	3.	Page Galahad: 60/60  Attack power: 20  XP: 3
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 2
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 5
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+3
+Neil used Status Advance!
+Page Galahad has advanced to Squire Galahad!
+pass
+Kevin's turn!
+Kevin drew a card.
+attack
+Boy Arthur used Royal Charm!
+Boy Arthur took 20 damage!
+Neil's turn!
+Neil drew a card.
+switch 1
+Boy Arthur was placed on the bench!
+Page Lancelot has entered the battle position!
+pass
+Kevin's turn!
+Kevin drew a card.
+attack
+Boy Arthur used Royal Charm!
+It's not very effective...
+Page Lancelot took 0 damage!
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+attack
+Boy Arthur used Royal Charm!
+It's not very effective...
+Page Lancelot took 0 damage!
+Neil's turn!
+Neil drew a card.
+switch 2
+Page Lancelot was placed on the bench!
+Page Robin has entered the battle position!
+pass
+Kevin's turn!
+Kevin drew a card.
+attack
+Boy Arthur used Royal Charm!
+Page Robin took 20 damage!
+Neil's turn!
+Neil drew a card.
+print field
+Neil's field
+	Battle Position: Page Robin: 40/60  Attack power: 20  XP: 7
+	Bench:
+	1.	Boy Arthur: 60/80  Attack power: 20  XP: 7
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 7
+	3.	Squire Galahad: 90/90  Attack power: 30  XP: 4
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 6
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+switch 3
+Page Robin was placed on the bench!
+Squire Galahad has entered the battle position!
+play 5
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Squire Galahad has advanced to Knight Galahad!
+print field
+Neil's field
+	Battle Position: Knight Galahad: 120/120  Attack power: 60  XP: 0
+	Bench:
+	1.	Boy Arthur: 60/80  Attack power: 20  XP: 7
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 7
+	3.	Page Robin: 40/60  Attack power: 20  XP: 7
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 6
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Boy Arthur recovered 5 HP!
+Page Lancelot recovered 5 HP!
+Page Robin recovered 5 HP!
+Neil's turn!
+Neil's deck is empty.
+print field
+Neil's field
+	Battle Position: Knight Galahad: 120/120  Attack power: 60  XP: 1
+	Bench:
+	1.	Boy Arthur: 65/80  Attack power: 20  XP: 8
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 8
+	3.	Page Robin: 45/60  Attack power: 20  XP: 8
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 7
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+***************************************** 4 *******************************
+
+***************************************** 5 *******************************
+
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 4
+Page Robin has entered the battle position!
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+attack
+Game over!  Neil has mercilessly conquered the pitiful Kevin!
+***************************************** 5 *******************************
+
+***************************************** 6 *******************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print a;lsdkfj
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+play 10
+This isn't a valid card number.
+play -1
+This isn't a valid card number.
+a;sldkfj asdlfkjla asd;flkjas df
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+switch 10
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+switch 10
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+this    
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+print this
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+print that
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+print switch
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+***************************************** 6 *******************************
+
