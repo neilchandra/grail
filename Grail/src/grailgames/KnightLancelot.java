@@ -18,4 +18,11 @@ public class KnightLancelot extends BraveDueler {
 		System.out.println(name + " is at its highest level; cannot advance!");
 		return this;
 	}
+	
+	@Override
+	public void attack(Dueler dueler) {
+		System.out.println(name+" used " + attack+"!");
+		dueler.attackedByBrave(damage);
+		damage += 5; //special power
+	}
 }
