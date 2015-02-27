@@ -120,7 +120,9 @@ public class Game {
 			// Perform action based on command
 			if (brokenCommand.length > 2) {
 				System.out
-						.println("Invalid input! Please input one of the following commands: 'print field', 'print hand', 'attack', 'switch [number]', 'play [number] or pass");
+						.println("Invalid input! Please input one of the following commands: "
+								+ " 'print field', 'print hand', 'attack', 'switch [number]',"
+								+ " 'play [number] or pass");
 			} else {
 
 				if (brokenCommand[0].equals("print")) {
@@ -153,24 +155,32 @@ public class Game {
 						System.out.println("This isn't a valid card number.");
 					}
 				} else if (brokenCommand[0].equals("pass")) {
+					// Switch currentPlayer 
 					Player temp = currentPlayer;
 					currentPlayer = otherPlayer;
 					otherPlayer = temp;
 					System.out.println(currentPlayer.getName()
 							+ " it's your turn!");
+					
+					// Player draws card before it's their turn
 					currentPlayer.drawCard();
+					
+					// Player's XP goes up every round they remain on the field
+					for(Dueler d : currentPlayer.field) {
+						if(d != null) {
+							d.addOneXP();
+						}
+					}
 				} else {
 					System.out
-							.println("Invalid input! Please input one of the following commands: 'print field', 'print hand', 'attack', 'switch [number]', 'play [number] or pass");
+					.println("Invalid input! Please input one of the following commands: "
+							+ " 'print field', 'print hand', 'attack', 'switch [number]',"
+							+ " 'play [number] or pass");
 				}
 
 			}
 
-			for(Dueler d : currentPlayer.field) {
-				if(d != null) {
-					d.addOneXP();
-				}
-			}
+			
 		
 		}	
 
