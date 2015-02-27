@@ -97,23 +97,10 @@ public class Game {
 			p2.drawCard();
 		}
 
-		// objective:
-		// listen for commands
-		// check legality of commands
-		// do actions
-		// switch turn if either attack or pass, i.e. switch players, increment
-		// counters etc.
-
-		int x = 0; // temporary
-		while (x == 0) { // change to game over condition
-			// Announce player's turn
-			System.out.println();
-			System.out.println(currentPlayer.getName() + "'s turn!");
-
-			x++;
-		}
 		
-		// Initial drawing of card at start of game
+		// Announce first player and do initial drawing of card at start of game
+		System.out.println();
+		System.out.println(currentPlayer.getName() + "'s turn!");
 		currentPlayer.drawCard();
 		
 		// Loop that runs game until finished
