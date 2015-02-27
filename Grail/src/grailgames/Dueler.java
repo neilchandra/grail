@@ -30,6 +30,7 @@ public abstract class Dueler extends Card {
 	 * @param increment - the amount of HP to be added to currentHP
 	 */
 	public void addHP(int increment) {
+		System.out.println(name + " recovered "+increment+" HP!");
 		if(maxHP - hp <= increment){
 			hp = maxHP;
 		} else {
@@ -61,6 +62,7 @@ public abstract class Dueler extends Card {
 	 * @param increment - the amount to be added to maxHP
 	 */
 	public void addMaxHP(int increment) {
+		System.out.println(name + "'s max HP increased by 20!");
 		maxHP += increment;
 	}
 	
