@@ -124,6 +124,15 @@ public abstract class Dueler extends Card {
 	public abstract void healByPure();
 	public abstract void healByRoyal();
 
+	
+	/**
+	 * Sets hp equal to maxHP
+	 */
+	public void restoreHealth() {
+		hp = maxHP;
+		System.out.println(getName()
+				+ "'s health was fully restored!");
+	}
 
 	@Override
 	public String toString() {

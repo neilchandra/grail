@@ -11,9 +11,7 @@ public class AnthraxAsylum extends TrainingCard {
 		// increase hp to max
 		Dueler dueler = game.currentPlayer.field[duelerIndex];
 		if (dueler != null) {
-			dueler.addHP(dueler.getMaxHP());
-			System.out.println(dueler.getName()
-					+ "'s health was fully restored");
+			dueler.restoreHealth();
 		} else {
 			System.out.println("No effect.");
 		}

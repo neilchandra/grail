@@ -50,7 +50,8 @@ public class BridgeOfDeath  extends TrainingCard  {
 			Dueler d = game.otherPlayer.field[0];
 			game.otherPlayer.field[0] = game.otherPlayer.field[duelerIndex];
 			game.otherPlayer.field[duelerIndex] = d;
-			
+			System.out.println(game.otherPlayer.field[0].getName() + " was moved to the arena!");
+			System.out.println(game.otherPlayer.field[duelerIndex].getName() + " was moved to the field!");
 			game.otherPlayer.field[0].restartArenaXP();
 			game.otherPlayer.field[duelerIndex].restartArenaXP();
 		}
