@@ -62,7 +62,7 @@ public class Game {
 			player2Deck = new ArrayList<Card>(0);
 		}
 
-		// incase deck files are not found/empty
+		// in case deck files are not found/empty
 		if (player1Deck.isEmpty()) {
 			System.out.println("Deck file not found!");
 		}
