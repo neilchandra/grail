@@ -202,8 +202,6 @@ public class Game {
 					}
 				} else if (brokenCommand[0].equals("pass")) {
 					switchTurn();
-				} else if (brokenCommand[0].equals("crash") && brokenCommand.length == 1){
-					System.exit(1);
 				} else {
 					System.out
 					.println("Invalid input! Please input one of the following commands: "
