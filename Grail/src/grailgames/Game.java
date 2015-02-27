@@ -119,16 +119,18 @@ public class Game {
 								+ " 'play #', or 'pass'");
 			} else {
 
-				if (brokenCommand[0].equals("print")) {
+				if (brokenCommand[0].equals("print") && brokenCommand.length == 2) {
 					// Catches print field and calls method
 					if (brokenCommand[1].equals("field")) {
 						currentPlayer.printField();
 						otherPlayer.printField();
-					}
-
-					// Catches print hand and calls method
-					if (brokenCommand[1].equals("hand")) {
+					} else if (brokenCommand[1].equals("hand")) {
 						currentPlayer.printHand();
+					} else {
+						System.out
+						.println("Invalid input! Please input one of the following commands: "
+								+ " 'print field', 'print hand', 'attack', 'switch #',"
+								+ " 'play #', or 'pass'");
 					}
 				} else if (brokenCommand[0].equals("attack")) {
 
@@ -162,7 +164,9 @@ public class Game {
 							.parseInt(brokenCommand[1]));
 				} else if (brokenCommand[0].equals("play") && brokenCommand.length == 2) {
 					// Parse command and
-					int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
+					try {
+						int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
+					
 					currentCard = cardNumber;
 					if (cardNumber < currentPlayer.hand.size()
 							&& cardNumber >= 0) {
@@ -170,8 +174,12 @@ public class Game {
 						// Card
 						currentPlayer.hand.get(cardNumber).play(this);
 						currentPlayer.hand.remove(cardNumber);
+						
 					} else {
 						System.out.println("This isn't a valid card number.");
+					}
+					} catch(NumberFormatException e) {
+						System.out.println("The 'play' must be followed be the number of the card!");
 					}
 				} else if (brokenCommand[0].equals("pass")) {
 					switchTurn();

@@ -49,7 +49,7 @@ public abstract class Dueler extends Card {
 	 * @param decrement - the amount of HP to be subtracted from currentHP
 	 */
 	public void subHP(int decrement) {
-		System.out.println(name +" took "+decrement +" damage!");
+		System.out.println(name +" took "+ decrement +" damage!");
 		if(hp - decrement <= 0) {
 			hp = 0;
 			isAlive = false;
@@ -107,7 +107,9 @@ public abstract class Dueler extends Card {
 	/** attack method */
 	public abstract void attack(Dueler dueler);
 	
-	/** advance level method */
+	/** advance level method'
+	 * 
+	 * @return - the next level of the dueler */
 	public abstract Dueler advanceLevel();
 
 	/** attacked by methods */
