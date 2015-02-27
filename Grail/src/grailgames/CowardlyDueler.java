@@ -11,7 +11,11 @@ public abstract class CowardlyDueler extends Dueler{
 	@Override
 	public void attackedByBrave(int _damage) {
 		System.out.println("It's not very effective...");
-		subHP(_damage - 20);
+		if(_damage < 20){
+			subHP(_damage);
+		} else {
+			subHP(_damage - 20);			
+		}
 	}
 
 	@Override
