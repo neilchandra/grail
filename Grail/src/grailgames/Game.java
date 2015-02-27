@@ -219,10 +219,10 @@ public class Game {
 				deck.add(new StatusAdvance());
 				break;
 			case "Page Robin":
-				deck.add(new Robin());
+				deck.add(new PageRobin());
 				break;
 			case "Peasant Merek":
-				deck.add(new Merek());
+				deck.add(new PeasantMerek());
 				break;
 			case "Page Lancelot":
 				deck.add(new PageLancelot());
@@ -237,7 +237,7 @@ public class Game {
 				deck.add(new Rowan());
 				break;
 			case "Boy Arthur":
-				deck.add(new Robin());
+				deck.add(new PageRobin());
 				break;
 			case "Peasant Patsy":
 				deck.add(new Patsy());

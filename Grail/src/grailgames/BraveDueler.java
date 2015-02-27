@@ -4,28 +4,28 @@ public abstract class BraveDueler extends Dueler {
 	
 	@Override
 	public void attack(Dueler dueler) {
-		dueler.attackedByBrave(currentDamage);
+		dueler.attackedByBrave(damage);
 	}
 
 	@Override
-	public void attackedByBrave(int damage) {
-		subHP(damage);
+	public void attackedByBrave(int _damage) {
+		subHP(_damage);
 	}
 
 	@Override
-	public void attackedByCowardly(int damage) {
-		subHP(damage + 20);
+	public void attackedByCowardly(int _damage) {
+		subHP(_damage + 20);
 		
 	}
 
 	@Override
-	public void attackedByPure(int damage) {
-		subHP(damage);
+	public void attackedByPure(int _damage) {
+		subHP(_damage);
 	}
 
 	@Override
-	public void attackedByRoyal(int damage) {
-		subHP(damage - 20);
+	public void attackedByRoyal(int _damage) {
+		subHP(_damage - 20);
 		
 	}
 
