@@ -27,10 +27,10 @@ public abstract class BraveDueler extends Dueler {
 	@Override
 	public void attackedByRoyal(int _damage) {
 		System.out.println("It's not very effective...");
-		if(_damage < 20){
+		if(_damage - 20 > 0){
 			subHP(_damage);
 		} else {
-			subHP(_damage - 20);			
+			subHP(0);			
 		}
 	}
 
