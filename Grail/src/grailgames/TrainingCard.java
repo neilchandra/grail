@@ -49,4 +49,9 @@ public abstract class TrainingCard extends Card{
 	}
 	
 	public abstract void actUpon(Dueler d);
+	
+	@Override
+	public String getName() {
+		return (name);	
+	}
 }
