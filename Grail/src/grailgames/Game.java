@@ -17,16 +17,20 @@ public class Game {
 	String [] deckFileNames = new String [2];
 	String [] playerNames = new String [2];
 	// Buffered reader for user input
-	BufferedReader user;
+	BufferedReader user  = new BufferedReader(new InputStreamReader(System.in));
 	// variable for current card called
 	Integer currentCard = null;
 	
 	public Game(String[] args) {
+
+		
 		if(args.length == 4){
 			playerNames[0] = args[0];
 			playerNames[1] = args[2];
 			deckFileNames[0] = args[1];
 			deckFileNames[1] = args[3];
+			
+			
 			
 		} else {
 			System.out.println("Usage: grailgames.Game <Player 1 Name> <Deck 1> <Player 2 Name> <Deck 2>");
@@ -99,14 +103,14 @@ public class Game {
 		while(x == 0) { //change to game over condition
 			//Announce player's turn
 			System.out.println();
-			System.out.println(currentPlayer.getName() + "'s turn.");
+			System.out.println(currentPlayer.getName() + "it's your turn!");
 			
 			x++;
 		}
 		
 
 	
-/*		while(true) {
+		while(true) {
 			
 	
 
@@ -174,7 +178,7 @@ public class Game {
 		
 		}	
 
-	*/	
+
 	}
 
 
@@ -282,9 +286,44 @@ public class Game {
 		currentPlayer.addDuelerToField(duelerIndex);
 	}
 
+	// Prompts for a Dueler 
+	/*
+	public Dueler promptForDueler() {
+		System.out.println("Select a Dueler:");
+		System.out.println("0 for the battling Duelers, 1-6 for the bench");
+		try {
+			String lineUser = user.readLine();
+			if(lineUser.equals("")){
+				System.out.println("Invalid input!  Please try again:");
+				promptForDueler();
+			} else {
+				String [] words = lineUser.split(" ");
+				int index = Integer.parseInt(words[0]); 
+				//it works if it reaches here
+				if(index >= 0 && index < 7) {
+					//do work of training card
+					Dueler [] duelers = currentPlayer.field;
+					if(duelers[index] == null) {
+						System.out.println("No effect.");
+					} else {
+						actUpon(duelers[index]);
+					}
+					
+				} else {
+					System.out.println("Invalid input!  Please try again:");
+					promptForDueler();
+				}
+			}
+		} catch(Exception e) {
+			System.out.println("Invalid input!  Please try again:");
+			play(c);
+		}	
+	}
+	*/
 	public static void main(String[] args) {
 
 		Game g = new Game(args);
+
 
 	}
 
