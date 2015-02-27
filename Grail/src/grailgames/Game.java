@@ -7,21 +7,25 @@ import java.io.InputStreamReader;
 
 public class Game {
 
-	// variable declaration
-
-	// players
+	/** Variables to represent players */
 	Player p1, p2, currentPlayer, otherPlayer;
 
-	// deck files
+	
+	/** Arrays to store deck and player names */
 	String[] deckFileNames = new String[2];
 	String[] playerNames = new String[2];
-	// Buffered reader for user input
-	BufferedReader user = new BufferedReader(new InputStreamReader(System.in));
-	// variable for current card called
+	
+
+	/** Variable for current card called/played */
 	Integer currentCard = null;
+	
+	
+	/** Buffered reader for user input */
+	BufferedReader user = new BufferedReader(new InputStreamReader(System.in));
 
+	
 	public Game(String[] args) {
-
+		// Stores commandline arguments
 		if (args.length == 4) {
 			playerNames[0] = args[0];
 			playerNames[1] = args[2];
@@ -34,6 +38,8 @@ public class Game {
 			System.exit(1);
 		}
 
+		
+		// Starts gameplay
 		try {
 			playGame();
 		} catch (IOException e) {
@@ -44,12 +50,15 @@ public class Game {
 
 	public void playGame() throws IOException {
 
-		// welcome to the game
+		// Welcome to the game
 		System.out.println("Welcome to the Grail Games!");
 
+		
 		ArrayList<Card> player1Deck;
 		ArrayList<Card> player2Deck;
-
+		
+		
+		// Builds decks for players
 		try {
 			player1Deck = buildDeck(GrailIO.getDeck(deckFileNames[0]));
 		} catch (IOException e) {
@@ -62,7 +71,8 @@ public class Game {
 			player2Deck = new ArrayList<Card>(0);
 		}
 
-		// in case deck files are not found/empty
+		
+		// Messages printed if decks can not be found
 		if (player1Deck.isEmpty()) {
 			System.out.println("Deck file not found!");
 		}
@@ -70,7 +80,7 @@ public class Game {
 			System.out.println("Deck file not found!");
 		}
 
-		// instantiate player with decks
+		// Instantiate player and give them decks
 		p1 = new Player(playerNames[0], player1Deck);
 		p2 = new Player(playerNames[1], player2Deck);
 		currentPlayer = p1;
@@ -81,7 +91,7 @@ public class Game {
 		System.out.println(p1.getName() + " vs. " + p2.getName());
 		System.out.println("Let the games begin!");
 
-		// draw 6 cards each
+		// Each player draws 6 cards each and puts them in their hands
 		for (int i = 0; i < 6; i++) {
 			p1.drawCard();
 			p2.drawCard();
@@ -102,13 +112,15 @@ public class Game {
 
 			x++;
 		}
-
+		
+		// Initial drawing of card at start of game
 		currentPlayer.drawCard();
+		
+		// Loop that runs game until finished
 		while (true) {
 
 			// Read command in and break in words
-			String command = user.readLine();
-			command.trim();
+			String command = user.readLine().trim();
 			String[] brokenCommand = command.split(" ");
 
 			// Perform action based on command
@@ -196,6 +208,10 @@ public class Game {
 
 	}
 
+	/** Switches who the current player is and increases 
+	 *  XP of dueler on field and new current player draws 
+	 *  card
+	 */
 	public void switchTurn() {
 
 		// Player's XP goes up every round they remain on the field
@@ -218,7 +234,7 @@ public class Game {
 	}
 
 	/**
-	 * Ends the game by crashing
+	 * Ends the game 
 	 */
 	public void endGame() {
 		System.exit(1);
@@ -300,50 +316,7 @@ public class Game {
 		return deck;
 	}
 
-	// Read in Decks
-	// Randomize Cards and Make Decks
-	// Make Player 1 draw 7 Cards from deck and move them into hand
-	// Make Player 1 draw 7 Cards from deck and move them into hand
-
-	// INSIDE LOOP
-	// State that it is player one's Turn
-	// wait for command
-	// request more information if needed
-	// check if game is over
-	// repeat loop
-
-	/*
-	 * command = read.readLine(); if(command == "play") { System.out.println();
-	 * }
-	 */
-
-	// Camelot will use Double Dispatch on play method
-	// one for Duelers, ActUpon, HolyHealthPotion and CamelotReinforcement
-	// Camelot has access to player's hand and field
-	// The number of card will be parse then use get([number]) to get card from
-	// hand
-
-	// If Dueler card is played
-	public void play(int duelerIndex) {
-		currentPlayer.addDuelerToField(duelerIndex);
-	}
-
-	// Prompts for a Dueler
-	/*
-	 * public Dueler promptForDueler() { System.out.println("Select a Dueler:");
-	 * System.out.println("0 for the battling Duelers, 1-6 for the bench"); try
-	 * { String lineUser = user.readLine(); if(lineUser.equals("")){
-	 * System.out.println("Invalid input!  Please try again:");
-	 * promptForDueler(); } else { String [] words = lineUser.split(" "); int
-	 * index = Integer.parseInt(words[0]); //it works if it reaches here
-	 * if(index >= 0 && index < 7) { //do work of training card Dueler []
-	 * duelers = currentPlayer.field; if(duelers[index] == null) {
-	 * System.out.println("No effect."); } else { actUpon(duelers[index]); }
-	 * 
-	 * } else { System.out.println("Invalid input!  Please try again:");
-	 * promptForDueler(); } } } catch(Exception e) {
-	 * System.out.println("Invalid input!  Please try again:"); play(c); } }
-	 */
+	/** Purpose is to run the games */
 	public static void main(String[] args) {
 
 		Game g = new Game(args);
