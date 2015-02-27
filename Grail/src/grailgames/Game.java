@@ -115,6 +115,7 @@ public class Game {
 
 			// Read command in and break in words
 			String command = user.readLine();
+			command.trim();
 			String[] brokenCommand = command.split(" ");
 
 			// Perform action based on command
