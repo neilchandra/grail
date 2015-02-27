@@ -1,25 +1,26 @@
 package grailgames;
 
-public abstract class Dueler extends Card implements Advanceable {
+public abstract class Dueler extends Card {
 	// to be implemented, just here for coding purposes
 
 	/** The maximum health the dueler can have */
 	protected int maxHP;
 
 	/** The current value of the dueler's HP */
-	protected int currentHP;
+	protected int hp;
 
 	/** The current attack of the dueler */
-	protected String currentAttack;
+	protected String attack;
 
 	/** The experience a dueler has in combat */
 	protected int xp;
+	
+	/** The amount of levels a dueler has been in the arena posn. */
+	protected int arenaXP;
 
-	/** The title which the dueler has */
-	protected String currentStage;
 	
 	/** The attack damage of the currentAttack */
-	protected int currentDamage;
+	protected int damage;
 
 	/** Whether the dueler is alive or not */
 	protected boolean isAlive;
@@ -29,16 +30,16 @@ public abstract class Dueler extends Card implements Advanceable {
 	 * @param increment - the amount of HP to be added to currentHP
 	 */
 	public void addHP(int increment) {
-		if(maxHP - currentHP <= increment){
-			currentHP = maxHP;
+		if(maxHP - hp <= increment){
+			hp = maxHP;
 		} else {
-			currentHP += increment;			
+			hp += increment;			
 		}
 	}
 	
 	@Override
 	public String getName() {
-		return (currentStage + " " + name);	
+		return (name);	
 	}
 	
 	/**
@@ -47,11 +48,11 @@ public abstract class Dueler extends Card implements Advanceable {
 	 * @param decrement - the amount of HP to be subtracted from currentHP
 	 */
 	public void subHP(int decrement) {
-		if(this.currentHP - decrement <= 0) {
-			this.currentHP = 0;
-			this.isAlive = false;
+		if(hp - decrement <= 0) {
+			hp = 0;
+			isAlive = false;
 		} else {
-			currentHP -= decrement;			
+			hp -= decrement;			
 		}
 	}
 
@@ -118,8 +119,8 @@ public abstract class Dueler extends Card implements Advanceable {
 
 	@Override
 	public String toString() {
-		return (this.currentStage + " " + this.name + ": HP - "
-				+ this.currentHP + "MaxHP - " + this.maxHP + " XP - " + xp);
+		return (name + ": HP - "
+				+ hp + "MaxHP - " + maxHP + " XP - " + xp);
 	}
 	
 	/** Moves the dueler into the next available spot in field starting with the arena */

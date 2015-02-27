@@ -13,6 +13,7 @@ public class Game {
 	// players
 	Player p1, p2, currentPlayer, otherPlayer;
 
+
 	// deck files
 	String [] deckFileNames = new String [2];
 	String [] playerNames = new String [2];
@@ -46,7 +47,6 @@ public class Game {
 		//welcome to the game
 		System.out.println("Welcome to the Grail Games!");
 		
-
 		ArrayList<Card> player1Deck;
 		ArrayList<Card> player2Deck;
 		
@@ -56,6 +56,7 @@ public class Game {
 		} catch (IOException e) {
 			player1Deck = new ArrayList<Card>(0);
 		}
+		
 		try{
 			player2Deck = buildDeck(GrailIO
 					.getDeck(deckFileNames[1]));			
@@ -224,10 +225,10 @@ public class Game {
 				deck.add(new Merek());
 				break;
 			case "Page Lancelot":
-				deck.add(new Lancelot());
+				deck.add(new PageLancelot());
 				break;
 			case "Peasant Concorde":
-				deck.add(new Concorde());
+				deck.add(new PeasantConcorde());
 				break;
 			case "Page Galahad":
 				deck.add(new Galahad());
