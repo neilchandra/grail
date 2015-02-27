@@ -6,5 +6,9 @@ public class PureHolyHealthPotion extends HolyHealthPotion {
 	public void actUpon(Dueler dueler){
 		dueler.healByPure();
 	}
+	
+	public PureHolyHealthPotion() {
+		name = "Pure Health";
+	}
 
 }

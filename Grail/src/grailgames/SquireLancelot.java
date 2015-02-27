@@ -13,4 +13,9 @@ public class SquireLancelot extends BraveDueler {
 		arenaXP = 0;
 	}
 	
+	@Override
+	public Dueler advanceLevel() {
+		return (new KnightLancelot());
+	}
+	
 }

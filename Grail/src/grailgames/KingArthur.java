@@ -13,5 +13,9 @@ public class KingArthur extends RoyalDueler {
 		arenaXP = 0;
 	}
 
+	@Override
+	public Dueler advanceLevel() {
+		return this;
+	}
 
 }

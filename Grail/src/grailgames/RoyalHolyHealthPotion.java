@@ -7,5 +7,8 @@ public class RoyalHolyHealthPotion extends HolyHealthPotion {
 		dueler.healByRoyal();
 	}
 
+	public RoyalHolyHealthPotion() {
+		name = "Royal Health";
+	}
 
 }

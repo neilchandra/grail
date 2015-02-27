@@ -2,6 +2,10 @@ package grailgames;
 
 public class BridgeOfDeath  extends TrainingCard  {
 
+	public BridgeOfDeath() {
+		name = "Bridge of Death";
+	}
+	
 	@Override
 	public void play(Game c) {
 		System.out.println("Select a Dueler:");

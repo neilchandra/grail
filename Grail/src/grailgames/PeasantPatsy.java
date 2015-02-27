@@ -13,5 +13,10 @@ public class PeasantPatsy extends RoyalDueler {
 		arenaXP = 0;
 	}
 
+	@Override
+	public Dueler advanceLevel() {
+		return new CCPatsy();
+	}
+
 	
 }

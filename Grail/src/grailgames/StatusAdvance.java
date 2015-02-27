@@ -1,10 +1,13 @@
 package grailgames;
 
-public class StatusAdvance extends TrainingCard implements ActUponDueler {
+public class StatusAdvance extends TrainingCard {
 
 	@Override
 	public void actUpon(Dueler dueler) {
-		dueler.advanceLevel();		
+		dueler = dueler.advanceLevel();		
 	}
 	
+	public StatusAdvance() {
+		name = "Status Advance";
+	}
 }

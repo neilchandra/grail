@@ -12,5 +12,10 @@ public class PageGalahad extends PureDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
+	
+	@Override
+	public Dueler advanceLevel() {
+		return (new SquireGalahad());
+	}
 
 }
