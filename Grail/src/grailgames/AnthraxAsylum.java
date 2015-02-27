@@ -7,10 +7,16 @@ public class AnthraxAsylum extends TrainingCard {
 	}
 	
 	@Override
-	public void actUpon(Dueler dueler) {
+	public void actUpon(Game game, int duelerIndex) {
 		// increase hp to max
-		dueler.addHP(dueler.getMaxHP());			
-		System.out.println(dueler.getName() + "'s health was fully restored");
+		Dueler dueler = game.currentPlayer.field[duelerIndex];
+		if (dueler != null) {
+			dueler.addHP(dueler.getMaxHP());
+			System.out.println(dueler.getName()
+					+ "'s health was fully restored");
+		} else {
+			System.out.println("No effect.");
+		}
 	}
 
 

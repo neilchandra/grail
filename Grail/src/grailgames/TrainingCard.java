@@ -7,6 +7,8 @@ public abstract class TrainingCard extends Card{
 	
 	BufferedReader user = new BufferedReader(new InputStreamReader(System.in));
 	
+	/** Performs the card action upon a dueler */
+	public abstract void actUpon(Game game, int duelerIndex);
 	
 	@Override
 	public void play(Game c) {
@@ -23,13 +25,8 @@ public abstract class TrainingCard extends Card{
 				//it works if it reaches here
 				if(index >= 0 && index < 7) {
 					//do work of training card
-					Dueler [] duelers = c.currentPlayer.field;
-					if(duelers[index] == null) {
-						System.out.println("No effect.");
-					} else {
-						actUpon(duelers[index]);
-					}
-					
+					System.out.println(c.currentPlayer.getName() + " used " + getName() + "!");
+					actUpon(c, index);
 				} else {
 					System.out.println("Invalid input!  Please try again:");
 					play(c);
@@ -48,7 +45,7 @@ public abstract class TrainingCard extends Card{
 		return this.name;
 	}
 	
-	public abstract void actUpon(Dueler d);
+	
 	
 	@Override
 	public String getName() {

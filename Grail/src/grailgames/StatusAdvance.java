@@ -3,13 +3,20 @@ package grailgames;
 public class StatusAdvance extends TrainingCard {
 
 	@Override
-	public void actUpon(Dueler dueler) {
-		if(dueler.getXP() >= 3) {
-			dueler = dueler.advanceLevel();	
+	public void actUpon(Game game, int duelerIndex) {
+		Dueler[] duelers = game.currentPlayer.field;
+		if (duelers[duelerIndex] != null) {
+			if (duelers[duelerIndex].getXP() >= 3) {
+				duelers[duelerIndex] = duelers[duelerIndex].advanceLevel();
+			} else {
+				System.out.println("This Dueler is not yet experiencd enough to increase status!");
+			}
+		} else {
+			System.out.println("No effect.");
 		}
 	}
 	
-	
+	/*
 	@Override
 	public void play(Game c) {
 		System.out.println("Select a Dueler:");
@@ -45,8 +52,9 @@ public class StatusAdvance extends TrainingCard {
 			play(c);
 		}
 				
-	}
+	} 
 	
+	*/
 	public StatusAdvance() {
 		name = "Status Advance";
 	}

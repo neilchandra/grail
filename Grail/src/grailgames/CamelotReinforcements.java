@@ -11,7 +11,7 @@ public class CamelotReinforcements extends TrainingCard {
 	}
 
 	@Override
-	public void actUpon(Dueler d) {
+	public void actUpon(Game game, int duelerIndex) {
 		//not needed
 	}
 	

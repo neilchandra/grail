@@ -5,7 +5,7 @@ public class BridgeOfDeath  extends TrainingCard  {
 	public BridgeOfDeath() {
 		name = "Bridge of Death";
 	}
-	
+	/*
 	@Override
 	public void play(Game c) {
 		System.out.println("Select a Dueler:");
@@ -41,11 +41,19 @@ public class BridgeOfDeath  extends TrainingCard  {
 		}
 	}
 	
+	*/
 	@Override
-	public void actUpon(Dueler d) {
-		//doesn't need to be implemented
-		
+	public void actUpon(Game game, int duelerIndex) {
+		if (game.otherPlayer.field[duelerIndex] == null) {
+			System.out.println("No effect.");
+		} else { // dueler in index to be switched with
+			Dueler d = game.otherPlayer.field[0];
+			game.otherPlayer.field[0] = game.otherPlayer.field[duelerIndex];
+			game.otherPlayer.field[duelerIndex] = d;
+			
+			game.otherPlayer.field[0].restartArenaXP();
+			game.otherPlayer.field[duelerIndex].restartArenaXP();
+		}
 	}
-
-	
 }
+

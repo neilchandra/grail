@@ -132,8 +132,9 @@ public class Game {
 								+ " 'play #', or 'pass'");
 					}
 				} else if (brokenCommand[0].equals("attack")) {
-
-					if (currentPlayer.field[0].getArenaXP() > 0) {
+					
+					// THE IF STATEMENT HAD GETARENAXP CHANGED TO GETXP 
+					if (currentPlayer.field[0].getXP() > 0) {
 						if (currentPlayer.field[0] != null) {
 							if (otherPlayer.field[0] == null) {
 								System.out
@@ -145,7 +146,7 @@ public class Game {
 							} else { //both filled
 								currentPlayer.field[0]
 										.attack(otherPlayer.field[0]);
-
+								switchTurn();
 							}
 						} else { //current player empty
 							System.out.println("No Dueler in battle position.");
