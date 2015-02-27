@@ -1,7 +1,11 @@
 package grailgames;
 
-public class AnthraxAsylum extends TrainingCard implements ActUponDueler {
+public class AnthraxAsylum extends TrainingCard {
 
+	public AnthraxAsylum() {
+		name = "Anthrax Asylum";
+	}
+	
 	@Override
 	public void actUpon(Dueler dueler) {
 		// increase hp to max

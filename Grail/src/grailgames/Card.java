@@ -2,7 +2,7 @@ package grailgames;
 
 public abstract class Card {
 	
-	public String name;
+	protected String name;
 	
 	/**
 	 * Produces the name of the card
