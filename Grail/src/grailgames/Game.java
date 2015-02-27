@@ -107,9 +107,14 @@ public class Game {
 		while (true) {
 
 			// Read command in and break in words
-			String command = user.readLine().trim();
-			String[] brokenCommand = command.split(" ");
+			String command = user.readLine();
+			if(command == null){
+				System.exit(1);
+			}
+			command = command.trim();
 
+			String[] brokenCommand = command.split(" ");
+			
 			// Perform action based on command
 			if (brokenCommand.length > 2) {
 				System.out
@@ -197,6 +202,8 @@ public class Game {
 					}
 				} else if (brokenCommand[0].equals("pass")) {
 					switchTurn();
+				} else if (brokenCommand[0].equals("crash") && brokenCommand.length == 1){
+					System.exit(1);
 				} else {
 					System.out
 					.println("Invalid input! Please input one of the following commands: "
