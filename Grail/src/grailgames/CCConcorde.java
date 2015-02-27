@@ -15,6 +15,7 @@ public class CCConcorde extends BraveDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " is at its highest level; cannot advance!");
 		return this;
 	}
 	
