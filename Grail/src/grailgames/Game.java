@@ -160,8 +160,22 @@ public class Game {
 					}
 
 				} else if (brokenCommand[0].equals("switch")  && brokenCommand.length == 2) {
-					currentPlayer.switchDueler(Integer
-							.parseInt(brokenCommand[1]));
+					try {
+						Integer i = Integer.parseInt(brokenCommand[1]);
+						if(i >= 0 && i < 7){
+							currentPlayer.switchDueler(i);							
+						} else {
+							System.out
+							.println("Invalid input! Please input one of the following commands: "
+									+ " 'print field', 'print hand', 'attack', 'switch #',"
+									+ " 'play #', or 'pass'");
+						}
+					} catch(NumberFormatException e) {
+						System.out
+						.println("Invalid input! Please input one of the following commands: "
+								+ " 'print field', 'print hand', 'attack', 'switch #',"
+								+ " 'play #', or 'pass'");
+					}
 				} else if (brokenCommand[0].equals("play") && brokenCommand.length == 2) {
 					// Parse command and
 					try {
@@ -185,9 +199,9 @@ public class Game {
 					switchTurn();
 				} else {
 					System.out
-							.println("Invalid input! Please input one of the following commands: "
-									+ " 'print field', 'print hand', 'attack', 'switch [number]',"
-									+ " 'play [number] or pass");
+					.println("Invalid input! Please input one of the following commands: "
+							+ " 'print field', 'print hand', 'attack', 'switch #',"
+							+ " 'play #', or 'pass'");
 				}
 
 			}
@@ -201,7 +215,12 @@ public class Game {
 	 *  card
 	 */
 	public void switchTurn() {
-
+		//check if your dueler is still alive
+		if(otherPlayer.field[0] != null && !otherPlayer.field[0].isAlive()) {
+			System.out.println(otherPlayer.field[0].getName()+" has fainted!");
+			otherPlayer.field[0] = null;
+		}
+		
 		// Player's XP goes up every round they remain on the field
 		for (Dueler d : otherPlayer.field) {
 			if (d != null) {
@@ -286,7 +305,7 @@ public class Game {
 				deck.add(new PeasantRowan());
 				break;
 			case "Boy Arthur":
-				deck.add(new PageRobin());
+				deck.add(new BoyArthur());
 				break;
 			case "Peasant Patsy":
 				deck.add(new PeasantPatsy());

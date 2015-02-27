@@ -18,5 +18,13 @@ public class KingArthur extends RoyalDueler {
 		System.out.println(name + " is at its highest level; cannot advance!");
 		return this;
 	}
+	
+	@Override
+	public void attack(Dueler dueler) {
+		System.out.println(name+" used " + attack+"!");
+		System.out.println(name+ " exiled "+ dueler.getName()+"!");
+		dueler.exile();
+		subHP(50);
+	}
 
 }

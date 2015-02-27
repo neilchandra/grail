@@ -25,6 +25,7 @@ public abstract class Dueler extends Card {
 	/** Whether the dueler is alive or not */
 	protected boolean isAlive;
 	
+
 	/**
 	 * Adds HP points to a Dueler, but not exceeding maxHP
 	 * @param increment - the amount of HP to be added to currentHP
@@ -44,6 +45,14 @@ public abstract class Dueler extends Card {
 	}
 	
 	/**
+	 * Returns the hp
+	 * @return - hp
+	 */
+	public int getHP() {
+		return hp;
+	}
+	
+	/**
 	 * Subtracts HP points from a Dueler, and sets isAlive = false
 	 * if currentHP reaches 0
 	 * @param decrement - the amount of HP to be subtracted from currentHP
@@ -52,10 +61,17 @@ public abstract class Dueler extends Card {
 		System.out.println(name +" took "+ decrement +" damage!");
 		if(hp - decrement <= 0) {
 			hp = 0;
-			isAlive = false;
+			exile();
 		} else {
 			hp -= decrement;			
 		}
+	}
+	
+	/**
+	 * Sets hp to 0
+	 */
+	public void depleteHP() {
+		hp = 0;
 	}
 
 	/**
@@ -102,6 +118,7 @@ public abstract class Dueler extends Card {
 	 */
 	public void exile() {
 		isAlive = false;
+		depleteHP();
 	}
 	
 	/** attack method */
@@ -124,6 +141,13 @@ public abstract class Dueler extends Card {
 	public abstract void healByPure();
 	public abstract void healByRoyal();
 
+	/**
+	 * Indicates if a Dueler is alive
+	 * @return - isAlive
+	 */
+	public boolean isAlive() {
+		return isAlive;
+	}
 	
 	/**
 	 * Sets hp equal to maxHP
