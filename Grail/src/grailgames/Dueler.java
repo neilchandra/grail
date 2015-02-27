@@ -136,7 +136,11 @@ public abstract class Dueler extends Card {
 			System.out.println("Your field is full! You cannot play this dueler!");
 		} else {
 			c.currentPlayer.field[openSpot] = (Dueler) c.currentPlayer.hand.get(c.currentCard);
-			System.out.println(c.currentPlayer.field[openSpot].getName() + " has entered the battle position!");
+			if(openSpot == 0){
+				System.out.println(c.currentPlayer.field[openSpot].getName() + " has entered the battle position!");				
+			} else {
+				System.out.println(c.currentPlayer.field[openSpot].getName() + " was placed on the bench!");
+			}
 		}
 		
 	}
