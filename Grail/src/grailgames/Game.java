@@ -231,16 +231,16 @@ public class Game {
 				deck.add(new PeasantConcorde());
 				break;
 			case "Page Galahad":
-				deck.add(new Galahad());
+				deck.add(new PageGalahad());
 				break;
 			case "Peasant Rowan":
-				deck.add(new Rowan());
+				deck.add(new PeasantRowan());
 				break;
 			case "Boy Arthur":
 				deck.add(new PageRobin());
 				break;
 			case "Peasant Patsy":
-				deck.add(new Patsy());
+				deck.add(new PeasantPatsy());
 				break;
 			case "Bridge of Death":
 				deck.add(new BridgeOfDeath());
