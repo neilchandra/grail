@@ -12,31 +12,28 @@ public class Game {
 	// players
 	Player p1, p2, currentPlayer, otherPlayer;
 
-
 	// deck files
-	String [] deckFileNames = new String [2];
-	String [] playerNames = new String [2];
+	String[] deckFileNames = new String[2];
+	String[] playerNames = new String[2];
 	// Buffered reader for user input
-	BufferedReader user  = new BufferedReader(new InputStreamReader(System.in));
+	BufferedReader user = new BufferedReader(new InputStreamReader(System.in));
 	// variable for current card called
 	Integer currentCard = null;
-	
+
 	public Game(String[] args) {
 
-		
-		if(args.length == 4){
+		if (args.length == 4) {
 			playerNames[0] = args[0];
 			playerNames[1] = args[2];
 			deckFileNames[0] = args[1];
 			deckFileNames[1] = args[3];
-			
-			
-			
+
 		} else {
-			System.out.println("Usage: grailgames.Game <Player 1 Name> <Deck 1> <Player 2 Name> <Deck 2>");
+			System.out
+					.println("Usage: grailgames.Game <Player 1 Name> <Deck 1> <Player 2 Name> <Deck 2>");
 			System.exit(1);
 		}
-		
+
 		try {
 			playGame();
 		} catch (IOException e) {
@@ -46,36 +43,34 @@ public class Game {
 	}
 
 	public void playGame() throws IOException {
-		
-		//welcome to the game
+
+		// welcome to the game
 		System.out.println("Welcome to the Grail Games!");
-		
+
 		ArrayList<Card> player1Deck;
 		ArrayList<Card> player2Deck;
-		
-		try{
-			player1Deck = buildDeck(GrailIO
-					.getDeck(deckFileNames[0]));			
+
+		try {
+			player1Deck = buildDeck(GrailIO.getDeck(deckFileNames[0]));
 		} catch (IOException e) {
 			player1Deck = new ArrayList<Card>(0);
 		}
-		
-		try{
-			player2Deck = buildDeck(GrailIO
-					.getDeck(deckFileNames[1]));			
+
+		try {
+			player2Deck = buildDeck(GrailIO.getDeck(deckFileNames[1]));
 		} catch (IOException e) {
 			player2Deck = new ArrayList<Card>(0);
 		}
-		
-		//incase deck files are not found/empty
-		if(player1Deck.isEmpty()){
+
+		// incase deck files are not found/empty
+		if (player1Deck.isEmpty()) {
 			System.out.println("Deck file not found!");
 		}
-		if(player2Deck.isEmpty()) {
+		if (player2Deck.isEmpty()) {
 			System.out.println("Deck file not found!");
 		}
-		
-		//instantiate player with decks
+
+		// instantiate player with decks
 		p1 = new Player(playerNames[0], player1Deck);
 		p2 = new Player(playerNames[1], player2Deck);
 		currentPlayer = p1;
@@ -84,34 +79,32 @@ public class Game {
 		// Opening game introduction
 		System.out.println("Welcome to the Arena!");
 		System.out.println(p1.getName() + " vs. " + p2.getName());
-		System.out.println("Let the games begin!");	
-		
-		//draw 6 cards each
-		for(int i=0; i<6; i++) {
+		System.out.println("Let the games begin!");
+
+		// draw 6 cards each
+		for (int i = 0; i < 6; i++) {
 			p1.drawCard();
 			p2.drawCard();
 		}
-		
-		
-		//objective:
-		//listen for commands
-		//check legality of commands
-		//do actions
-		//switch turn if either attack or pass, i.e. switch players, increment counters etc.
-	
-		int x = 0; //temporary
-		while(x == 0) { //change to game over condition
-			//Announce player's turn
+
+		// objective:
+		// listen for commands
+		// check legality of commands
+		// do actions
+		// switch turn if either attack or pass, i.e. switch players, increment
+		// counters etc.
+
+		int x = 0; // temporary
+		while (x == 0) { // change to game over condition
+			// Announce player's turn
 			System.out.println();
-			System.out.println(currentPlayer.getName() + " it's your turn!");
-			
+			System.out.println(currentPlayer.getName() + "'s turn!");
+
 			x++;
 		}
-		
+
 		currentPlayer.drawCard();
 		while (true) {
-
-			
 
 			// Read command in and break in words
 			String command = user.readLine();
@@ -122,8 +115,8 @@ public class Game {
 			if (brokenCommand.length > 2) {
 				System.out
 						.println("Invalid input! Please input one of the following commands: "
-								+ " 'print field', 'print hand', 'attack', 'switch [number]',"
-								+ " 'play [number] or pass");
+								+ " 'print field', 'print hand', 'attack', 'switch #',"
+								+ " 'play #', or 'pass'");
 			} else {
 
 				if (brokenCommand[0].equals("print")) {
@@ -138,7 +131,32 @@ public class Game {
 						currentPlayer.printHand();
 					}
 				} else if (brokenCommand[0].equals("attack")) {
-					currentPlayer.field[0].attack(otherPlayer.field[0]);
+
+					if (currentPlayer.field[0].getArenaXP() > 0) {
+						if (currentPlayer.field[0] != null) {
+							if (otherPlayer.field[0] == null) {
+								System.out
+										.println("Game over!  "
+												+ currentPlayer.getName()
+												+ " has mercilessly conquered the pitiful "
+												+ otherPlayer.getName() + "!");
+								endGame();
+							} else { //both filled
+								currentPlayer.field[0]
+										.attack(otherPlayer.field[0]);
+
+							}
+						} else { //current player empty
+							System.out.println("No Dueler in battle position.");
+							switchTurn();
+						}
+
+					} else {
+						System.out.println(currentPlayer.field[0].getName()
+								+ " is not experienced enough yet to attack!");
+						switchTurn();
+					}
+
 				} else if (brokenCommand[0].equals("switch")) {
 					currentPlayer.switchDueler(Integer
 							.parseInt(brokenCommand[1]));
@@ -156,38 +174,47 @@ public class Game {
 						System.out.println("This isn't a valid card number.");
 					}
 				} else if (brokenCommand[0].equals("pass")) {
-					// Switch currentPlayer 
-					Player temp = currentPlayer;
-					currentPlayer = otherPlayer;
-					otherPlayer = temp;
-					System.out.println(currentPlayer.getName()
-							+ " it's your turn!");
-					
-					// Player draws card before it's their turn
-					currentPlayer.drawCard();
-					
-					// Player's XP goes up every round they remain on the field
-					for(Dueler d : currentPlayer.field) {
-						if(d != null) {
-							d.addOneXP();
-						}
-					}
+					switchTurn();
 				} else {
 					System.out
-					.println("Invalid input! Please input one of the following commands: "
-							+ " 'print field', 'print hand', 'attack', 'switch [number]',"
-							+ " 'play [number] or pass");
+							.println("Invalid input! Please input one of the following commands: "
+									+ " 'print field', 'print hand', 'attack', 'switch [number]',"
+									+ " 'play [number] or pass");
 				}
 
 			}
 
-			
-		
-		}	
-
+		}
 
 	}
 
+	public void switchTurn() {
+
+		// Player's XP goes up every round they remain on the field
+		for (Dueler d : otherPlayer.field) {
+			if (d != null) {
+				d.addOneXP();
+			}
+		}
+		if (otherPlayer.field[0] != null) {
+			otherPlayer.field[0].addOneArenaXP();
+		}
+		Player temp = currentPlayer;
+		currentPlayer = otherPlayer;
+		otherPlayer = temp;
+		System.out.println(currentPlayer.getName() + "'s turn!");
+
+		// Player draws card before it's their turn
+		currentPlayer.drawCard();
+
+	}
+
+	/**
+	 * Ends the game by crashing
+	 */
+	public void endGame() {
+		System.exit(1);
+	}
 
 	/**
 	 * Reads Deck file and constructs the deck, an arraylist of cards
@@ -293,44 +320,25 @@ public class Game {
 		currentPlayer.addDuelerToField(duelerIndex);
 	}
 
-	// Prompts for a Dueler 
+	// Prompts for a Dueler
 	/*
-	public Dueler promptForDueler() {
-		System.out.println("Select a Dueler:");
-		System.out.println("0 for the battling Duelers, 1-6 for the bench");
-		try {
-			String lineUser = user.readLine();
-			if(lineUser.equals("")){
-				System.out.println("Invalid input!  Please try again:");
-				promptForDueler();
-			} else {
-				String [] words = lineUser.split(" ");
-				int index = Integer.parseInt(words[0]); 
-				//it works if it reaches here
-				if(index >= 0 && index < 7) {
-					//do work of training card
-					Dueler [] duelers = currentPlayer.field;
-					if(duelers[index] == null) {
-						System.out.println("No effect.");
-					} else {
-						actUpon(duelers[index]);
-					}
-					
-				} else {
-					System.out.println("Invalid input!  Please try again:");
-					promptForDueler();
-				}
-			}
-		} catch(Exception e) {
-			System.out.println("Invalid input!  Please try again:");
-			play(c);
-		}	
-	}
-	*/
+	 * public Dueler promptForDueler() { System.out.println("Select a Dueler:");
+	 * System.out.println("0 for the battling Duelers, 1-6 for the bench"); try
+	 * { String lineUser = user.readLine(); if(lineUser.equals("")){
+	 * System.out.println("Invalid input!  Please try again:");
+	 * promptForDueler(); } else { String [] words = lineUser.split(" "); int
+	 * index = Integer.parseInt(words[0]); //it works if it reaches here
+	 * if(index >= 0 && index < 7) { //do work of training card Dueler []
+	 * duelers = currentPlayer.field; if(duelers[index] == null) {
+	 * System.out.println("No effect."); } else { actUpon(duelers[index]); }
+	 * 
+	 * } else { System.out.println("Invalid input!  Please try again:");
+	 * promptForDueler(); } } } catch(Exception e) {
+	 * System.out.println("Invalid input!  Please try again:"); play(c); } }
+	 */
 	public static void main(String[] args) {
 
 		Game g = new Game(args);
-
 
 	}
 

@@ -63,12 +63,16 @@ public class Player {
 				// switches the duelers
 				field[index] = field[0];
 				field[0] = tempD;
+				
+				field[0].restartArenaXP();
+				field[index].restartArenaXP();
 			} else {
 				
 				// only moves dueler from arena to bench
 				System.out.println(field[0].getName()+" was placed on the bench!");
 				field[index] = field[0];
 				field[0] = null;
+				field[index].restartArenaXP();
 			}
 		} else { //arena position empty
 			if(field[index] == null){
@@ -77,6 +81,7 @@ public class Player {
 				System.out.println(field[index].getName()+" has entered the battle position!");
 				field[0] = field[index];
 				field[index] = null;
+				field[0].restartArenaXP();
 			}
 			
 		} 

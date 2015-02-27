@@ -49,6 +49,7 @@ public abstract class Dueler extends Card {
 	 * @param decrement - the amount of HP to be subtracted from currentHP
 	 */
 	public void subHP(int decrement) {
+		System.out.println(name +" took "+decrement +" damage!");
 		if(hp - decrement <= 0) {
 			hp = 0;
 			isAlive = false;
@@ -151,6 +152,29 @@ public abstract class Dueler extends Card {
 			}
 		}
 		return -1;
+	}
+
+	/**
+	 * Increments the current value of arena XP by 1
+	 */
+	public void addOneArenaXP() {
+		arenaXP++;
+		
+	}
+	
+	/**
+	 * Returns the arenaXp
+	 * @return - arenaXP
+	 */
+	public int getArenaXP() {
+		return arenaXP;
+	}
+	
+	/**
+	 * Sets the arenaXP to 0
+	 */
+	public void restartArenaXP() {
+		arenaXP = 0;
 	}
 
 	
