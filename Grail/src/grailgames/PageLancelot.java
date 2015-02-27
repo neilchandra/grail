@@ -15,6 +15,7 @@ public class PageLancelot extends BraveDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to Squire Lancelot!");
 		return (new SquireLancelot(maxHP - hp));
 	}
 

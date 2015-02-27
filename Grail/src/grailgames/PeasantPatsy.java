@@ -15,6 +15,7 @@ public class PeasantPatsy extends RoyalDueler {
 
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to CC Patsy!");
 		return new CCPatsy(maxHP - hp);
 	}
 

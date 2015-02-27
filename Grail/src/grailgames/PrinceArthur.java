@@ -15,6 +15,7 @@ public class PrinceArthur extends RoyalDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to King Arthur!");
 		return (new KingArthur(maxHP - hp));
 	}
 

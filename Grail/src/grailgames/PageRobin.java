@@ -15,7 +15,7 @@ public class PageRobin extends CowardlyDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
-		System.out.println(name + "has advance to Squire Robin!");
+		System.out.println(name + " has advanced to Squire Robin!");
 		return (new SquireRobin(maxHP - hp));		
 	}
 

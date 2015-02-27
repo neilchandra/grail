@@ -15,6 +15,7 @@ public class PeasantMerek extends CowardlyDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to Minstrel Merek!");
 		return (new MinstrelMerek(maxHP - hp));
 		
 	}

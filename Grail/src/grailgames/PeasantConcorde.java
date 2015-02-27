@@ -15,6 +15,7 @@ public class PeasantConcorde extends BraveDueler {
 
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to CC Concorde!");
 		return (new CCConcorde(maxHP - hp));
 	}
 }

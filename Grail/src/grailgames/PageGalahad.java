@@ -15,6 +15,7 @@ public class PageGalahad extends PureDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to Squire Galahad!");
 		return (new SquireGalahad(maxHP - hp));
 	}
 

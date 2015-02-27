@@ -15,6 +15,7 @@ public class SquireGalahad extends PureDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to Knight Galahad!");
 		return (new KnightGalahad(maxHP - hp));
 	}
 	

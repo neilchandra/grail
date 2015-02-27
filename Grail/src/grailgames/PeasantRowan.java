@@ -15,6 +15,7 @@ public class PeasantRowan extends PureDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
+		System.out.println(name + " has advanced to CC Rowan!");
 		return (new CCRowan(maxHP - hp));
 	}
 
