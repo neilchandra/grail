@@ -1,18 +1,18 @@
 package grailgames;
 
 public class SquireRobin extends CowardlyDueler {
-	public SquireRobin() {
+	public SquireRobin(int damageTaken) {
 		name = "Squire Robin";
 		attack = "Dash";
 		damage = 30;
 		isAlive = true;
 		maxHP = 100;
-		hp = maxHP;
+		hp = maxHP - damageTaken;
 		xp = 0;
 		arenaXP = 0;
 	}
 	@Override
 	public Dueler advanceLevel() {
-		return (new KnightRobin());
+		return (new KnightRobin(maxHP - hp));
 	}
 }

@@ -15,7 +15,7 @@ public class PeasantMerek extends CowardlyDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
-		return (new MinstrelMerek());
+		return (new MinstrelMerek(maxHP - hp));
 		
 	}
 

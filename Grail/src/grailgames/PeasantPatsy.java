@@ -15,7 +15,7 @@ public class PeasantPatsy extends RoyalDueler {
 
 	@Override
 	public Dueler advanceLevel() {
-		return new CCPatsy();
+		return new CCPatsy(maxHP - hp);
 	}
 
 	

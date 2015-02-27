@@ -15,6 +15,6 @@ public class BoyArthur extends RoyalDueler {
 
 	@Override
 	public Dueler advanceLevel() {
-		return (new PrinceArthur());
+		return (new PrinceArthur(maxHP - hp));
 	}
 }

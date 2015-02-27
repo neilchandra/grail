@@ -15,7 +15,7 @@ public class PeasantRowan extends PureDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
-		return (new CCRowan());
+		return (new CCRowan(maxHP - hp));
 	}
 
 	

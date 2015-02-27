@@ -15,6 +15,6 @@ public class PeasantConcorde extends BraveDueler {
 
 	@Override
 	public Dueler advanceLevel() {
-		return (new CCConcorde());
+		return (new CCConcorde(maxHP - hp));
 	}
 }

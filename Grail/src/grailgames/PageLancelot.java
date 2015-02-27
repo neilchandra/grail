@@ -15,7 +15,7 @@ public class PageLancelot extends BraveDueler {
 	
 	@Override
 	public Dueler advanceLevel() {
-		return (new SquireLancelot());
+		return (new SquireLancelot(maxHP - hp));
 	}
 
 

@@ -2,13 +2,13 @@ package grailgames;
 
 public class CCConcorde extends BraveDueler {
 
-	public CCConcorde() {
+	public CCConcorde(int damage) {
 		name = "CC Concorde";
 		attack = "Concorde's Conqueror";
 		damage = 30;
 		isAlive = true;
 		maxHP = 70;
-		hp = maxHP;
+		hp = maxHP - damage;
 		xp = 0;
 		arenaXP = 0;
 	}
