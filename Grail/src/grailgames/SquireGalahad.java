@@ -13,4 +13,9 @@ public class SquireGalahad extends PureDueler {
 		arenaXP = 0;
 	}
 	
+	@Override
+	public Dueler advanceLevel() {
+		return (new KnightGalahad());
+	}
+	
 }

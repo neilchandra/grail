@@ -13,4 +13,8 @@ public class BoyArthur extends RoyalDueler {
 		arenaXP = 0;
 	}
 
+	@Override
+	public Dueler advanceLevel() {
+		return (new PrinceArthur());
+	}
 }

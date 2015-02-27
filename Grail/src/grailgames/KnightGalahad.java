@@ -13,4 +13,9 @@ public class KnightGalahad extends PureDueler {
 		arenaXP = 0;
 	}
 	
+	@Override
+	public Dueler advanceLevel() {
+		return this;
+	}
+	
 }

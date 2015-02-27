@@ -13,4 +13,9 @@ public class CCConcorde extends BraveDueler {
 		arenaXP = 0;
 	}
 	
+	@Override
+	public Dueler advanceLevel() {
+		return this;
+	}
+	
 }

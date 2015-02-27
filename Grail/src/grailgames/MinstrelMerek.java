@@ -12,4 +12,10 @@ public class MinstrelMerek extends CowardlyDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
+	
+	@Override
+	public Dueler advanceLevel() {
+		return this;
+		
+	}
 }

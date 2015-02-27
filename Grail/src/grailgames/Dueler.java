@@ -103,6 +103,9 @@ public abstract class Dueler extends Card {
 	
 	/** attack method */
 	public abstract void attack(Dueler dueler);
+	
+	/** advance level method */
+	public abstract Dueler advanceLevel();
 
 	/** attacked by methods */
 	public abstract void attackedByBrave(int damage);

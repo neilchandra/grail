@@ -12,5 +12,10 @@ public class CCPatsy extends RoyalDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
+	
+	@Override
+	public Dueler advanceLevel() {
+		return this;
+	}
 
 }

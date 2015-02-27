@@ -12,4 +12,9 @@ public class PeasantConcorde extends BraveDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
+
+	@Override
+	public Dueler advanceLevel() {
+		return (new CCConcorde());
+	}
 }

@@ -11,4 +11,8 @@ public class SquireRobin extends CowardlyDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
+	@Override
+	public Dueler advanceLevel() {
+		return (new KnightRobin());
+	}
 }
