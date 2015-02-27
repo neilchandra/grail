@@ -103,73 +103,69 @@ public class Game {
 		while(x == 0) { //change to game over condition
 			//Announce player's turn
 			System.out.println();
-			System.out.println(currentPlayer.getName() + "it's your turn!");
+			System.out.println(currentPlayer.getName() + " it's your turn!");
 			
 			x++;
 		}
 		
+		currentPlayer.drawCard();
+		while (true) {
 
-	
-		while(true) {
 			
-	
 
-			// Read command in and break in words 
+			// Read command in and break in words
 			String command = user.readLine();
 			String[] brokenCommand = command.split(" ");
-			
+
 			// Perform action based on command
-			if(brokenCommand.length > 2){
-				System.out.println("Invalid input! Please input one of the following commands: 'print field', 'print hand', 'attack', 'switch [number]', 'play [number] or pass");
+			if (brokenCommand.length > 2) {
+				System.out
+						.println("Invalid input! Please input one of the following commands: 'print field', 'print hand', 'attack', 'switch [number]', 'play [number] or pass");
 			} else {
-				
-				if(brokenCommand[0].equals("print")) {
+
+				if (brokenCommand[0].equals("print")) {
 					// Catches print field and calls method
-					if(brokenCommand[1].equals("field")) {
+					if (brokenCommand[1].equals("field")) {
 						currentPlayer.printField();
-						otherPlayer.printField();			
+						otherPlayer.printField();
 					}
-					
+
 					// Catches print hand and calls method
-					if(brokenCommand[1].equals("hand")) {
+					if (brokenCommand[1].equals("hand")) {
 						currentPlayer.printHand();
-					}	
-				}
-				
-				
-				if(brokenCommand[0].equals("attack")) {
+					}
+				} else if (brokenCommand[0].equals("attack")) {
 					currentPlayer.field[0].attack(otherPlayer.field[0]);
-				}
-				
-				
-				if(brokenCommand[0].equals("switch")) {
-					currentPlayer.switchDueler(Integer.parseInt(brokenCommand[1]));
-				}
-				
-				
-				if(brokenCommand[0].equals("play")) {
-					// Parse command and 
+				} else if (brokenCommand[0].equals("switch")) {
+					currentPlayer.switchDueler(Integer
+							.parseInt(brokenCommand[1]));
+				} else if (brokenCommand[0].equals("play")) {
+					// Parse command and
 					int cardNumber = Integer.parseInt(brokenCommand[1]) - 1;
-					
-					if(cardNumber < currentPlayer.hand.size() && cardNumber > 0) {
-						// Code that calls the appropriate play method for that Card
+					currentCard = cardNumber;
+					if (cardNumber < currentPlayer.hand.size()
+							&& cardNumber >= 0) {
+						// Code that calls the appropriate play method for that
+						// Card
 						currentPlayer.hand.get(cardNumber).play(this);
+						currentPlayer.hand.remove(cardNumber);
 					} else {
 						System.out.println("This isn't a valid card number.");
 					}
-				}
-
-				
-				
-				if(brokenCommand[0].equals("pass")) {
+				} else if (brokenCommand[0].equals("pass")) {
 					Player temp = currentPlayer;
 					currentPlayer = otherPlayer;
 					otherPlayer = temp;
-					System.out.println(currentPlayer.getName() + " it's your turn!");
+					System.out.println(currentPlayer.getName()
+							+ " it's your turn!");
+					currentPlayer.drawCard();
+				} else {
+					System.out
+							.println("Invalid input! Please input one of the following commands: 'print field', 'print hand', 'attack', 'switch [number]', 'play [number] or pass");
 				}
-				
+
 			}
-			
+
 			for(Dueler d : currentPlayer.field) {
 				if(d != null) {
 					d.addOneXP();

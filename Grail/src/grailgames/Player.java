@@ -103,7 +103,7 @@ public class Player {
 
 	/** Prints the entire hand of the player */
 	public void printHand() {
-		int index = 0;
+		int index = 1;
 		if (!hand.isEmpty()) {
 			for (Card c : hand) {
 				System.out.println(index + ". " + c.getName());
@@ -132,7 +132,7 @@ public class Player {
 					System.out.println("	" + x + ".	Empty");
 				} else {
 
-					System.out.println("	" + x + ".	 " + field[x].toString());
+					System.out.println("	" + x + ".	" + field[x].toString());
 				}
 			}
 		}

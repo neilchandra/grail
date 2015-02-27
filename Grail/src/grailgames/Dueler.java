@@ -122,8 +122,8 @@ public abstract class Dueler extends Card {
 
 	@Override
 	public String toString() {
-		return (name + ": HP - "
-				+ hp + "MaxHP - " + maxHP + " XP - " + xp);
+		return (name + ": " + hp +"/" + maxHP + "  Attack power: " + damage + "  XP: "
+				+ xp);
 	}
 	
 	/** Moves the dueler into the next available spot in field starting with the arena */
@@ -133,6 +133,7 @@ public abstract class Dueler extends Card {
 			System.out.println("Your field is full! You cannot play this dueler!");
 		} else {
 			c.currentPlayer.field[openSpot] = (Dueler) c.currentPlayer.hand.get(c.currentCard);
+			System.out.println(c.currentPlayer.field[openSpot].getName() + " has entered the battle position!");
 		}
 		
 	}
@@ -143,7 +144,7 @@ public abstract class Dueler extends Card {
 	 *  */
 	public int findOpenSpot(Player player) {
 		for(int x = 0; x < player.field.length; x++) {
-			if(player.field[x] != null) {
+			if(player.field[x] == null) {
 				return x;
 			}
 		}
