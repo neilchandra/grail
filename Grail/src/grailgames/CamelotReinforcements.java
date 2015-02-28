@@ -2,6 +2,13 @@ package grailgames;
 
 public class CamelotReinforcements extends TrainingCard {
 
+	/**
+	 * Sets the name of the card
+	 */
+	public CamelotReinforcements() {
+		name = "Camelot Reinforcements";
+	}
+	
 	@Override
 	public void play(Game c) {
 		System.out.println(c.currentPlayer.getName()+" used Camelot Reinforcements!");
@@ -14,8 +21,5 @@ public class CamelotReinforcements extends TrainingCard {
 	public void actUpon(Game game, int duelerIndex) {
 		//not needed
 	}
-	
-	public CamelotReinforcements() {
-		name = "Camelot Reinforcements";
-	}
+
 }

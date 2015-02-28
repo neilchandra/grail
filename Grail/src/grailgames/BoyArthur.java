@@ -1,7 +1,10 @@
 package grailgames;
 
 public class BoyArthur extends RoyalDueler {
-	
+
+	/**
+	 * Sets all the variables inherited from super classes
+	 */
 	public BoyArthur() {
 		name = "Boy Arthur";
 		attack = "Royal Charm";

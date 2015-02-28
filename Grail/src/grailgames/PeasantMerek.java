@@ -2,6 +2,9 @@ package grailgames;
 
 public class PeasantMerek extends CowardlyDueler {
 	
+	/**
+	 * Sets all the variables inherited from super classes
+	 */
 	public PeasantMerek() {
 		name = "Peasant Merek";
 		attack = "Ballad Bash";
@@ -12,13 +15,11 @@ public class PeasantMerek extends CowardlyDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
-	
+
 	@Override
 	public Dueler advanceLevel() {
 		System.out.println(name + " has advanced to Minstrel Merek!");
 		return (new MinstrelMerek(maxHP - hp));
-		
-	}
 
-	
+	}
 }

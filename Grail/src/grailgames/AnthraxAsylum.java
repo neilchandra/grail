@@ -2,10 +2,13 @@ package grailgames;
 
 public class AnthraxAsylum extends TrainingCard {
 
+	/**
+	 * Sets the name of the card
+	 */
 	public AnthraxAsylum() {
 		name = "Anthrax Asylum";
 	}
-	
+
 	@Override
 	public void actUpon(Game game, int duelerIndex) {
 		// increase hp to max
@@ -16,6 +19,4 @@ public class AnthraxAsylum extends TrainingCard {
 			System.out.println("No effect.");
 		}
 	}
-
-
 }

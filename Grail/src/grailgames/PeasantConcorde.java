@@ -2,6 +2,9 @@ package grailgames;
 
 public class PeasantConcorde extends BraveDueler {
 	
+	/**
+	 * Sets all the variables inherited from super classes
+	 */
 	public PeasantConcorde() {
 		name = "Peasant Concorde";
 		attack = "Brave Bite";

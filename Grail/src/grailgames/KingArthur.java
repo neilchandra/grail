@@ -24,7 +24,7 @@ public class KingArthur extends RoyalDueler {
 		System.out.println(name+" used " + attack+"!");
 		System.out.println(name+ " exiled "+ dueler.getName()+"!");
 		dueler.exile();
-		subHP(50);
+		subHP(60);
 	}
 
 }

@@ -1,7 +1,10 @@
 package grailgames;
 
 public class PageRobin extends CowardlyDueler {
-	
+
+	/**
+	 * Sets all the variables inherited from super classes
+	 */
 	public PageRobin() {
 		name = "Page Robin";
 		attack = "Squeal";
@@ -12,11 +15,10 @@ public class PageRobin extends CowardlyDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
-	
+
 	@Override
 	public Dueler advanceLevel() {
 		System.out.println(name + " has advanced to Squire Robin!");
-		return (new SquireRobin(maxHP - hp));		
+		return (new SquireRobin(maxHP - hp));
 	}
-
 }

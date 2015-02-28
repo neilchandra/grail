@@ -15,22 +15,114 @@ public abstract class Dueler extends Card {
 	/** The experience a dueler has in combat */
 	protected int xp;
 	
-	/** The amount of levels a dueler has been in the arena posn. */
+	/** The amount of levels a dueler has been
+	 *  in the arena position.
+	 */
 	protected int arenaXP;
 
-	
 	/** The attack damage of the currentAttack */
 	protected int damage;
 
 	/** Whether the dueler is alive or not */
 	protected boolean isAlive;
 	
-	/** Whether the dueler raises hp of others, true for only Knight Galahad */
+	/** Whether the dueler raises hp of others,
+	 *  true for only Knight Galahad 
+	 */
 	protected boolean enhancesOthers = false;
 	
+	/** 
+	 * Advances the dueler to the next stage/level
+	 * 
+	 * @return - the next level of the dueler 
+	 */
+	public abstract Dueler advanceLevel();
+	
+	/** 
+	 * Attacks the given player from opponents arena
+	 * 
+	 * @param dueler - the opponents dueler in the arena
+	 */
+	public abstract void attack(Dueler dueler);
 
+	/** 
+	 * Method that tells Dueler it is being attacked 
+	 * by a Brave Dueler
+	 * 
+	 * @param damage - the damage of the attack 
+	 */
+	public abstract void attackedByBrave(int damage);
+	
+	/** 
+	 * Method that tells Dueler it is being attacked 
+	 * by a Cowardly Dueler
+	 * 
+	 * @param damage - the damage of the attack 
+	 */
+	public abstract void attackedByCowardly(int damage);
+	
+	/** 
+	 * Method that tells Dueler it is being attacked 
+	 * by a Pure Dueler
+	 * 
+	 * @param damage - the damage of the attack 
+	 */
+	public abstract void attackedByPure(int damage);
+	
+	/** 
+	 * Method that tells Dueler it is being attacked 
+	 * by a Royal Dueler
+	 * 
+	 * @param damage - the damage of the attack 
+	 */
+	public abstract void attackedByRoyal(int damage);
+	
+	/** 
+	 * Method that tells Dueler Brave Heath 
+	 * is acting on it
+	 */
+	public abstract void healByBrave();
+	
+	/** 
+	 * Method that tells Dueler Cowardly Heath 
+	 * is acting on it
+	 */
+	public abstract void healByCowardly();
+	
+	/** 
+	 * Method that tells Dueler Pure Heath 
+	 * is acting on it
+	 */
+	public abstract void healByPure();
+	
+	/** 
+	 * Method that tells Dueler Royal Heath 
+	 * is acting on it
+	 */
+	public abstract void healByRoyal();
+	
+	
+	/**
+	 * Returns the hp
+	 * 
+	 * @return - the current health of the dueler
+	 */
+	public int getHP() {
+		return hp;
+	}
+	
+	/**
+	 * Returns the maxHP
+	 * 
+	 * @return - the current health of the dueler
+	 */
+	public int getMaxHP() {
+		return maxHP;
+	}
+	
 	/**
 	 * Adds HP points to a Dueler, but not exceeding maxHP
+	 * 
 	 * @param increment - the amount of HP to be added to currentHP
 	 */
 	public void addHP(int increment) {
@@ -42,22 +134,10 @@ public abstract class Dueler extends Card {
 		}
 	}
 	
-	@Override
-	public String getName() {
-		return (name);	
-	}
-	
-	/**
-	 * Returns the hp
-	 * @return - hp
-	 */
-	public int getHP() {
-		return hp;
-	}
-	
 	/**
 	 * Subtracts HP points from a Dueler, and sets isAlive = false
 	 * if currentHP reaches 0
+	 * 
 	 * @param decrement - the amount of HP to be subtracted from currentHP
 	 */
 	public void subHP(int decrement) {
@@ -71,22 +151,24 @@ public abstract class Dueler extends Card {
 	}
 	
 	/**
-	 * Sets hp to 0
+	 * Sets dueler's hp to 0
 	 */
 	public void depleteHP() {
 		hp = 0;
 	}
-
+	
 	/**
-	 * Indicates wheter a dueler enhances other duelers in the field
-	 * @return - enhancesOthers
+	 * Sets dueler's hp equal to maxHP
 	 */
-	public boolean isEnhancesOthers() {
-		return enhancesOthers;
+	public void restoreHealth() {
+		hp = maxHP;
+		System.out.println(getName()
+				+ "'s health was fully restored!");
 	}
 
 	/**
 	 * Increases the quantity maxHP by a certain amount
+	 * 
 	 * @param increment - the amount to be added to maxHP
 	 */
 	public void addMaxHP(int increment) {
@@ -95,11 +177,12 @@ public abstract class Dueler extends Card {
 	}
 	
 	/**
-	 * Gets the value of maxHP
-	 * @return - maxHP
+	 * Returns the XP of the dueler
+	 * 
+	 * @return - the xp of the dueler
 	 */
-	public int getMaxHP() {
-		return maxHP;
+	public int getXP() {
+		return this.xp;
 	}
 	
 	/**
@@ -115,13 +198,29 @@ public abstract class Dueler extends Card {
 	public void xpToZero() {
 		xp = 0;
 	}
+
+	/**
+	 * Returns the arenaXp
+	 * 
+	 * @return - arenaXP
+	 */
+	public int getArenaXP() {
+		return arenaXP;
+	}
 	
 	/**
-	 * Returns the XP of the dueler
-	 * @return - the xp of the dueler
+	 * Increments the current value of arena XP by 1
 	 */
-	public int getXP() {
-		return this.xp;
+	public void addOneArenaXP() {
+		arenaXP++;
+		
+	}
+	
+	/**
+	 * Sets the arenaXP to 0
+	 */
+	public void restartArenaXP() {
+		arenaXP = 0;
 	}
 	
 	/**
@@ -132,28 +231,9 @@ public abstract class Dueler extends Card {
 		depleteHP();
 	}
 	
-	/** attack method */
-	public abstract void attack(Dueler dueler);
-	
-	/** advance level method'
-	 * 
-	 * @return - the next level of the dueler */
-	public abstract Dueler advanceLevel();
-
-	/** attacked by methods */
-	public abstract void attackedByBrave(int damage);
-	public abstract void attackedByCowardly(int damage);
-	public abstract void attackedByPure(int damage);
-	public abstract void attackedByRoyal(int damage);
-	
-	/** heal by holy health potion */
-	public abstract void healByBrave();
-	public abstract void healByCowardly();
-	public abstract void healByPure();
-	public abstract void healByRoyal();
-
 	/**
 	 * Indicates if a Dueler is alive
+	 * 
 	 * @return - isAlive
 	 */
 	public boolean isAlive() {
@@ -161,43 +241,28 @@ public abstract class Dueler extends Card {
 	}
 	
 	/**
-	 * Sets hp equal to maxHP
+	 * Indicates whether a dueler enhances other duelers in the field
+	 * 
+	 * @return - enhancesOthers
 	 */
-	public void restoreHealth() {
-		hp = maxHP;
-		System.out.println(getName()
-				+ "'s health was fully restored!");
+	public boolean isEnhancesOthers() {
+		return enhancesOthers;
 	}
-
+	
 	@Override
 	public String toString() {
 		return (name + ": " + hp +"/" + maxHP + "  Attack power: " + damage + "  XP: "
 				+ xp);
 	}
 	
-	/** Moves the dueler into the next available spot in field starting with the arena */
-	public void play(Game c) {
-		int openSpot = findOpenSpot(c.currentPlayer);
-		if(openSpot == -1) { //no open spots
-			System.out.println("Your field is full! You cannot play this dueler!");
-		} else {
-			c.currentPlayer.field[openSpot] = (Dueler) c.currentPlayer.hand.get(c.currentCard);
-			if(openSpot == 0){
-				System.out.println(c.currentPlayer.field[openSpot].getName() + " has entered the battle position!");				
-			} else {
-				System.out.println(c.currentPlayer.field[openSpot].getName() + " was placed on the bench!");
-			}
-		}
-		
-	}
-	
-	/** Finds the next available spot open on the bench
+	/** 
+	 * Finds the next available spot open on the bench
 	 * 
-	 *  @return - returns the index which is open or -1 to represent a full bench
+	 * @return - returns the index of open empty spot or -1 if none
 	 *  */
 	public int findOpenSpot(Player player) {
-		for(int x = 0; x < player.field.length; x++) {
-			if(player.field[x] == null) {
+		for (int x = 0; x < player.field.length; x++) {
+			if (player.field[x] == null) {
 				return x;
 			}
 		}
@@ -205,27 +270,28 @@ public abstract class Dueler extends Card {
 	}
 
 	/**
-	 * Increments the current value of arena XP by 1
+	 * Moves the dueler into the next available spot in field starting with the
+	 * arena
 	 */
-	public void addOneArenaXP() {
-		arenaXP++;
+	public void play(Game c) {
+		// Find next open spot in field
+		int openSpot = findOpenSpot(c.currentPlayer);
 		
-	}
-	
-	/**
-	 * Returns the arenaXp
-	 * @return - arenaXP
-	 */
-	public int getArenaXP() {
-		return arenaXP;
-	}
-	
-	/**
-	 * Sets the arenaXP to 0
-	 */
-	public void restartArenaXP() {
-		arenaXP = 0;
+		if (openSpot == -1) { // no open spots
+			System.out
+					.println("Your field is full! You cannot play this dueler!");
+		} else {
+			c.currentPlayer.field[openSpot] = (Dueler) c.currentPlayer.hand
+					.get(c.currentCard);
+			if (openSpot == 0) {
+				System.out.println(c.currentPlayer.field[openSpot].getName()
+						+ " has entered the battle position!");
+			} else {
+				System.out.println(c.currentPlayer.field[openSpot].getName()
+						+ " was placed on the bench!");
+			}
+		}
+
 	}
 
-	
 }

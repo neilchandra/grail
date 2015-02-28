@@ -2,6 +2,9 @@ package grailgames;
 
 public class PeasantPatsy extends RoyalDueler {
 
+	/**
+	 * Sets all the variables inherited from super classes
+	 */
 	public PeasantPatsy() {
 		name = "Peasant Patsy";
 		attack = "Patsy Punch";
@@ -18,6 +21,4 @@ public class PeasantPatsy extends RoyalDueler {
 		System.out.println(name + " has advanced to CC Patsy!");
 		return new CCPatsy(maxHP - hp);
 	}
-
-	
 }

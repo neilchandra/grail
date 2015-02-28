@@ -4,7 +4,7 @@ public abstract class PureDueler extends Dueler{
 
 	@Override
 	public void attack(Dueler dueler) {
-		System.out.println(name+" used " + attack+"!");
+		System.out.println(name + " used " + attack + "!");
 		dueler.attackedByPure(damage);
 	}
 
@@ -16,12 +16,11 @@ public abstract class PureDueler extends Dueler{
 	@Override
 	public void attackedByCowardly(int _damage) {
 		System.out.println("It's not very effective...");
-		if(_damage - 20 > 0){
+		if (_damage - 20 > 0) {
 			subHP(_damage);
 		} else {
-			subHP(0);			
+			subHP(0);
 		}
-		
 	}
 
 	@Override
@@ -34,7 +33,7 @@ public abstract class PureDueler extends Dueler{
 		System.out.println("It was very effective!");
 		subHP(_damage + 20);
 	}
-	
+
 	@Override
 	public void healByBrave() {
 		addHP(10);
@@ -54,5 +53,4 @@ public abstract class PureDueler extends Dueler{
 	public void healByRoyal() {
 		addHP(10);
 	}
-
 }

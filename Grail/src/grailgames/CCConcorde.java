@@ -1,7 +1,13 @@
 package grailgames;
 
 public class CCConcorde extends BraveDueler {
-
+	
+	/**
+	 * Sets all the variables inherited from super classes
+	 * 
+	 * @param damageTaken
+	 *            - the damage already taken by the stage before this one
+	 */
 	public CCConcorde(int damageTaken) {
 		name = "CC Concorde";
 		attack = "Concorde's Conqueror";
@@ -12,11 +18,10 @@ public class CCConcorde extends BraveDueler {
 		xp = 0;
 		arenaXP = 0;
 	}
-	
+
 	@Override
 	public Dueler advanceLevel() {
 		System.out.println(name + " is at its highest level; cannot advance!");
 		return this;
 	}
-	
 }

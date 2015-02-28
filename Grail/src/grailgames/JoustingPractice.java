@@ -2,6 +2,13 @@ package grailgames;
 
 public class JoustingPractice extends TrainingCard {
 
+	/**
+	 * Sets the name of the card
+	 */
+	public JoustingPractice() {
+		name = "Jousting Practice";
+	}
+	
 	@Override
 	public void actUpon(Game game, int duelerIndex) {
 		//add 20 to max hp and then 20 to current hp
@@ -13,10 +20,4 @@ public class JoustingPractice extends TrainingCard {
 			System.out.println("No effect.");
 		}
 	}
-	
-	public JoustingPractice() {
-		name = "Jousting Practice";
-	}
-	
-	
 }
