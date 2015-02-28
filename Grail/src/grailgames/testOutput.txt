@@ -7,6 +7,11 @@ Table of Contents: Grail Kevin and Neil
 4) Knight Galahad Special Power + Valid Switches
 5) Game Over Case
 6) Invalid Inputs
+7) Exit Game Command
+8) Anthrax Asylum - no effect and effect
+9) Jousting Practice - with no hp gone and hp gone
+10) Holy Health Potions - of proper type and not of proper type
+11) Bridge of Death - validity check
 
 ***************************************** 1 *********************
 Welcome to the Grail Games!
@@ -804,3 +809,684 @@ print switch
 Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
 ***************************************** 6 *******************************
 
+***************************************** 7 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+Goodbye!
+***************************************** 7 ********************************
+
+***************************************** 8 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Anthrax Asylum
+6. Anthrax Asylum
+7. Anthrax Asylum
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+pass
+Kevin's turn!
+Kevin drew a card.
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+print hand
+1. Page Robin
+2. Anthrax Asylum
+3. Anthrax Asylum
+4. Anthrax Asylum
+pass
+Neil's turn!
+Neil drew a card.
+play 3
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Anthrax Asylum!
+Boy Arthur's health was fully restored!
+print field
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+attack
+Boy Arthur used Royal Charm!
+Boy Arthur took 20 damage!
+Kevin's turn!
+Kevin drew a card.
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 60/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 3
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Kevin used Anthrax Asylum!
+Boy Arthur's health was fully restored!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+***************************************** 8 ********************************
+
+***************************************** 9 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Jousting Practice
+6. Jousting Practice
+7. Jousting Practice
+play 1
+Boy Arthur has entered the battle position!
+play 2
+Page Lancelot was placed on the bench!
+play 1
+Page Galahad was placed on the bench!
+print hand
+1. Page Robin
+2. Jousting Practice
+3. Jousting Practice
+4. Jousting Practice
+attack
+Boy Arthur is not experienced enough yet to attack!
+Kevin's turn!
+Kevin drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Jousting Practice
+6. Jousting Practice
+7. Jousting Practice
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+print hand
+1. Page Robin
+2. Jousting Practice
+3. Jousting Practice
+4. Jousting Practice
+play 2
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Kevin used Jousting Practice!
+Boy Arthur's max HP increased by 20!
+Boy Arthur recovered 20 HP!
+pritn field
+Invalid input! Please input one of the following commands:  'print field', 'print hand', 'attack', 'switch #', 'play #', or 'pass'
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 100/100  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	2.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 3    
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Kevin used Jousting Practice!
+Boy Arthur's max HP increased by 20!
+Boy Arthur recovered 20 HP!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 120/120  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	2.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+attack
+Boy Arthur is not experienced enough yet to attack!
+Neil's turn!
+Neil drew a card.
+attack
+Boy Arthur used Royal Charm!
+Boy Arthur took 20 damage!
+Kevin's turn!
+Kevin drew a card.
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 100/120  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	2.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+print hand
+1. Page Robin
+2. Jousting Practice
+3. Jousting Practice
+play 2
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Kevin used Jousting Practice!
+Boy Arthur's max HP increased by 20!
+Boy Arthur recovered 20 HP!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 120/140  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	2.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+***************************************** 9 ********************************
+
+***************************************** 10 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Royal Health
+6. Cowardly Health
+7. Pure Health
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+play 1
+Page Robin was placed on the bench!
+pass
+Kevin's turn!
+Kevin drew a card.
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+play 1
+Page Robin was placed on the bench!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Page Robin: 60/60  Attack power: 20  XP: 0
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Page Robin: 60/60  Attack power: 20  XP: 0
+	4.	Empty
+	5.	Empty
+	6.	Empty
+pass
+Neil's turn!
+Neil drew a card.
+attack
+Boy Arthur used Royal Charm!
+Boy Arthur took 20 damage!
+Kevin's turn!
+Kevin drew a card.
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 60/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Page Robin: 60/60  Attack power: 20  XP: 1
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 1
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 1
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 1
+	3.	Page Robin: 60/60  Attack power: 20  XP: 1
+	4.	Empty
+	5.	Empty
+	6.	Empty
+attack
+Boy Arthur used Royal Charm!
+Boy Arthur took 20 damage!
+Neil's turn!
+Neil drew a card.
+print hand
+1. Royal Health
+2. Cowardly Health
+3. Pure Health
+4. Brave Health
+5. Royal Health
+attack
+Boy Arthur used Royal Charm!
+Boy Arthur took 20 damage!
+Kevin's turn!
+Kevin drew a card.
+print hand 
+1. Royal Health
+2. Cowardly Health
+3. Pure Health
+4. Brave Health
+5. Royal Health
+print hand
+1. Royal Health
+2. Cowardly Health
+3. Pure Health
+4. Brave Health
+5. Royal Health
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 40/80  Attack power: 20  XP: 2
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 2
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 2
+	3.	Page Robin: 60/60  Attack power: 20  XP: 2
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 60/80  Attack power: 20  XP: 2
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 2
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 2
+	3.	Page Robin: 60/60  Attack power: 20  XP: 2
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 2
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Kevin used Cowardly Health!
+Boy Arthur recovered 10 HP!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 50/80  Attack power: 20  XP: 2
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 2
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 2
+	3.	Page Robin: 60/60  Attack power: 20  XP: 2
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 60/80  Attack power: 20  XP: 2
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 2
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 2
+	3.	Page Robin: 60/60  Attack power: 20  XP: 2
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 4
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Kevin used Royal Health!
+Boy Arthur recovered 30 HP!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 2
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 2
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 2
+	3.	Page Robin: 60/60  Attack power: 20  XP: 2
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Boy Arthur: 60/80  Attack power: 20  XP: 2
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 2
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 2
+	3.	Page Robin: 60/60  Attack power: 20  XP: 2
+	4.	Empty
+	5.	Empty
+	6.	Empty
+attack
+Boy Arthur used Royal Charm!
+Boy Arthur took 20 damage!
+Neil's turn!
+Neil drew a card.
+print hand 
+1. Royal Health
+2. Cowardly Health
+3. Pure Health
+4. Brave Health
+5. Royal Health
+6. Cowardly Health
+play 4
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Brave Health!
+Boy Arthur recovered 10 HP!
+play 3
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Pure Health!
+Boy Arthur recovered 10 HP!
+***************************************** 10 ********************************
+
+***************************************** 11 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+Goodbye!
+Neils-MacBook-Pro:src Neil$ java grailgames.Game Neil grailgames/DeckDueler Kevin grailgames/DeckDueler 
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Bridge of Death
+6. Bridge of Death
+7. Bridge of Death
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+play 1
+Page Robin was placed on the bench!
+pass
+Kevin's turn!
+Kevin drew a card.
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+print hand
+1. Page Robin
+2. Bridge of Death
+3. Bridge of Death
+4. Bridge of Death
+play 2
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+3
+Kevin used Bridge of Death!
+Page Robin was moved to the arena!
+Boy Arthur was moved to the field!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Page Robin: 60/60  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Boy Arthur: 80/80  Attack power: 20  XP: 0
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 2 
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+1
+Kevin used Bridge of Death!
+Page Galahad was moved to the arena!
+Page Robin was moved to the field!
+print field
+Kevin's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Galahad: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Neil's field
+	Battle Position: Page Galahad: 60/60  Attack power: 20  XP: 0
+	Bench:
+	1.	Page Robin: 60/60  Attack power: 20  XP: 0
+	2.	Page Lancelot: 60/60  Attack power: 20  XP: 0
+	3.	Boy Arthur: 80/80  Attack power: 20  XP: 0
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 2  
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+5
+Kevin used Bridge of Death!
+No effect.
+***************************************** 11 ********************************
+
+***************************************** 12 ********************************
+***************************************** 12 ********************************
+
+***************************************** 13 ********************************
+***************************************** 13 ********************************
+
+***************************************** 14 ********************************
+***************************************** 14 ********************************

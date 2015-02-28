@@ -42,14 +42,6 @@ public class Game {
 					.println("Usage: grailgames.Game <Player 1 Name> <Deck 1> <Player 2 Name> <Deck 2>");
 			endGame();
 		}
-
-		// Starts gameplay
-		try {
-			playGame();
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.out.println("IOException: game unable to start");
-		}
 	}
 	
 	/**
@@ -428,5 +420,12 @@ public class Game {
 	 */
 	public static void main(String[] args) {
 		Game g = new Game(args);
+		// Starts gameplay
+		try {
+			g.playGame();
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("IOException: game unable to start");
+		}
 	}
 }
