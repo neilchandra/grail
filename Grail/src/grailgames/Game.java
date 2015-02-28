@@ -40,7 +40,7 @@ public class Game {
 		} else {
 			System.out
 					.println("Usage: grailgames.Game <Player 1 Name> <Deck 1> <Player 2 Name> <Deck 2>");
-			System.exit(1);
+			endGame();
 		}
 
 		// Starts gameplay
@@ -118,10 +118,11 @@ public class Game {
 			// Read command in and break in words
 			String command = user.readLine();
 
-			/*
-			 * // What's the point of this? if(command == null){ System.exit(1);
-			 * }
-			 */
+			if(command == null){ 
+				System.out.println("Goodbye!");
+				endGame();
+			}
+
 
 			// Break command into parts
 			String[] brokenCommand = command.trim().split(" ");
