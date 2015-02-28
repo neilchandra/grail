@@ -2,7 +2,7 @@ Gameplay Testing Log
 
 Table of Contents: Grail Kevin and Neil
 1) King Arthur Special Power + Dueler Gets Exiled
-2) Knight Robin Special Power
+2) Knight Robin Special Power, Status Advance testing
 3) Knight Lancelot Special Power + Advantage Brave over Royal
 4) Knight Galahad Special Power + Valid Switches
 5) Game Over Case
@@ -12,6 +12,9 @@ Table of Contents: Grail Kevin and Neil
 9) Jousting Practice - with no hp gone and hp gone
 10) Holy Health Potions - of proper type and not of proper type
 11) Bridge of Death - validity check
+12) Camelot Reinforcements - deck full, deck partially full, deck empty
+13) Attack before turn, training card on empty space
+14) Status Advance something thats maxxed out
 
 ***************************************** 1 *********************
 Welcome to the Grail Games!
@@ -1483,10 +1486,305 @@ No effect.
 ***************************************** 11 ********************************
 
 ***************************************** 12 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Camelot Reinforcements
+6. Camelot Reinforcements
+7. Camelot Reinforcements
+play 1
+Boy Arthur has entered the battle position!
+play 1
+Page Galahad was placed on the bench!
+play 1
+Page Lancelot was placed on the bench!
+play 1
+Page Robin was placed on the bench!
+play 1
+Neil used Camelot Reinforcements!
+Neil drew a card.
+Neil drew a card.
+Neil drew a card.
+print hand
+1. Camelot Reinforcements
+2. Camelot Reinforcements
+3. Page Robin
+4. Page Robin
+5. Camelot Reinforcements
+play 1
+Neil used Camelot Reinforcements!
+Neil drew a card.
+Neil's deck is empty.
+Neil's deck is empty.
+print hand
+1. Camelot Reinforcements
+2. Page Robin
+3. Page Robin
+4. Camelot Reinforcements
+5. Page Robin
+play 1
+Neil used Camelot Reinforcements!
+Neil's deck is empty.
+Neil's deck is empty.
+Neil's deck is empty.
+
 ***************************************** 12 ********************************
 
 ***************************************** 13 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Camelot Reinforcements
+play 5
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+No effect.
+play 1
+Boy Arthur has entered the battle position!
+attack
+Boy Arthur is not experienced enough yet to attack!
+Kevin's turn!
+Kevin drew a card.
 ***************************************** 13 ********************************
 
 ***************************************** 14 ********************************
+Welcome to the Grail Games!
+Welcome to the Arena!
+Neil vs. Kevin
+Let the games begin!
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+Neil drew a card.
+Kevin drew a card.
+
+Neil's turn!
+Neil drew a card.
+print hand
+1. Boy Arthur
+2. Page Galahad
+3. Page Lancelot
+4. Page Robin
+5. Status Advance
+6. Status Advance
+7. Status Advance
+play 1
+Boy Arthur has entered the battle position!
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+print hand
+1. Page Galahad
+2. Page Lancelot
+3. Page Robin
+4. Status Advance
+5. Status Advance
+6. Status Advance
+7. Status Advance
+8. Camelot Reinforcements
+9. Camelot Reinforcements
+print field
+Neil's field
+	Battle Position: Boy Arthur: 80/80  Attack power: 20  XP: 3
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Empty
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+play 4
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Boy Arthur has advanced to Prince Arthur!
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+print field
+Neil's field
+	Battle Position: Prince Arthur: 120/120  Attack power: 40  XP: 3
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Empty
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+print hand
+1. Page Galahad
+2. Page Lancelot
+3. Page Robin
+4. Status Advance
+5. Status Advance
+6. Status Advance
+7. Camelot Reinforcements
+8. Camelot Reinforcements
+9. Camelot Reinforcements
+10. Page Robin
+11. Page Robin
+play 4
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+Prince Arthur has advanced to King Arthur!
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil drew a card.
+pass
+Kevin's turn!
+Kevin drew a card.
+pass
+Neil's turn!
+Neil's deck is empty.
+print field
+Neil's field
+	Battle Position: King Arthur: 160/160  Attack power: 50  XP: 3
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+Kevin's field
+	Battle Position: Empty
+	Bench:
+	1.	Empty
+	2.	Empty
+	3.	Empty
+	4.	Empty
+	5.	Empty
+	6.	Empty
+print hand
+1. Page Galahad
+2. Page Lancelot
+3. Page Robin
+4. Status Advance
+5. Status Advance
+6. Camelot Reinforcements
+7. Camelot Reinforcements
+8. Camelot Reinforcements
+9. Page Robin
+10. Page Robin
+11. Camelot Reinforcements
+12. Page Robin
+play 4
+Select a Dueler:
+0 for the battling Duelers, 1-6 for the bench
+0
+Neil used Status Advance!
+King Arthur is at its highest level; cannot advance!
 ***************************************** 14 ********************************
