@@ -101,7 +101,6 @@ public abstract class Dueler extends Card {
 	 */
 	public abstract void healByRoyal();
 	
-	
 	/**
 	 * Returns the hp
 	 * 

@@ -140,7 +140,8 @@ public class Game {
 										+ " 'print field', 'print hand', 'attack', 'switch #',"
 										+ " 'play #', or 'pass'");
 					}
-				} else if (brokenCommand[0].equals("attack")) {
+				} else if (brokenCommand[0].equals("attack") && brokenCommand.length == 1) {
+					// Catches for attack
 					if(currentPlayer.field[0] != null) {
 						if (currentPlayer.field[0].getXP() > 0) {
 							if (otherPlayer.field[0] == null) {
@@ -164,12 +165,6 @@ public class Game {
 						System.out.println("No Dueler in battle position.");
 						switchTurn();
 					}
-					
-					
-					
-					// Catches for attack
-
-
 				} else if (brokenCommand[0].equals("switch")
 						&& brokenCommand.length == 2) {
 					// Catches for switch command
@@ -209,7 +204,7 @@ public class Game {
 						System.out
 								.println("The 'play' must be followed be the number of the card!");
 					}
-				} else if (brokenCommand[0].equals("pass")) {
+				} else if (brokenCommand[0].equals("pass") && brokenCommand.length == 1) {
 					// Catches for pass command
 					switchTurn();
 				} else if (brokenCommand[0].equals("crash")
